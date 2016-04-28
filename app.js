@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
+var Order = require('./models/order');
 
 // var Club = require('./models/club');
 // var Comment = require('./models/comment');
