@@ -1,46 +1,129 @@
 
 <% include ./partials/header %>
 
-
-
 <div class="row">
-<div class="small-12 text-center columns">
-  <h1>Bulk Upload</h1>
-</div>
-</div>
-<div class="row">
-   <div id="imgContainer" class="small-7 columns">8 columns</div>
-    <div class="small-5 columns">
-      <form action="./order" method="POST">
-        <label>VW CODE 
-          <input name="code" type="text" aria-describedby="exampleHelpText">
-        </label>
-        <label>Select Menu
-          <select>
-            <option value="husker">Husker</option>
-            <option value="starbuck">Starbuck</option>
-            <option value="hotdog">Hot Dog</option>
-            <option value="apollo">Apollo</option>
-          </select>
-        </label>
-        <div class="row">
-  
-          <fieldset class="large-12 columns">
-            <legend>Options</legend>
-            <input value="true" id="checkbox1" name="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label><br>
-            <input value="true" id="checkbox2" name="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label><br>
-            <input value="true" id="checkbox3" name="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-          </fieldset>
-        </div>
-       <label>
-          Notes
-          <textarea name="notes"></textarea>
-        </label>
-          <button class="button">Submit</button>
-      </form>    
+    <div class="small-12 text-center columns">
+      <h1>Bulk Upload</h1>
     </div>
- 
 </div>
+
+<div class="row">
+  
+    <div id="imgContainer" class="small-7 columns">
+      <h4>Automotive Checklist with Sample</h4>
+      <div style="background-image: url(http://res.cloudinary.com/djangoles/image/upload/v1461874263/volvo2_hplzp0.jpg); background-repeat: no-repeat; height: 100%; width: 100%;" id="changeMe">
+        
+        <!-----------------DYNAMIC CONTENT WILL GO HERE------------------------>
+      </div>
+    </div>
+  
+  
+  
+      <div class="small-5 columns"><!--RIGHT SIDE FORM START-->
+          
+          <div class="small-12 text-center columns auto">
+            <h4>Automotive</h4>
+          </div>
+          <!--ENDCARD FIELD-->
+          <div class="small-5 columns">
+            <form action="./order" method="POST">
+              <p class="labelhead">VW Endcard Template</p> 
+          </div>
+          <div class="small-7 columns">
+              <input placeholder="please enter code: DW002" name="code" type="text" aria-describedby="exampleHelpText">
+          </div>
+          <hr>
+          <!--ENDCARD FIELD END-->
+          
+          <!--TIMING FIELD-->
+          <div class="small-5 columns">
+              <p class="labelhead">Timing Configuration</p> 
+          </div>
+          
+         <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:24/:06</legend>
+              <input value=":24/:06" id="timingbox1" name="timingbox1" type="checkbox">
+            </fieldset>
+          </div>
+          
+           <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:25/:05</legend>
+              <input value=":25/:05" id="timingbox2" name="timingbox2" type="checkbox">
+            </fieldset>
+          </div>
+    
+           <div class="small-3 columns">
+              <fieldset>
+              <legend class="labelhead">Custom</legend>
+              <input name="cust_timing" type="text" aria-describedby="exampleHelpText">
+              </fieldset>
+          </div>
+          <hr>
+          <!--TIMING FIELD END-->
+          
+          <!--BASE CREATIVE TAGGING-->
+          <div class="small-12 text-center columns auto2">
+            <h5>Base Creative Tagging - Lower 3rd Only</h5>
+          </div>
+            <div class="row">
+              <div class="small-7 text-right columns">
+                  <p class="labelhead">None</p>
+                  <p class="labelhead">Phone</p>
+                  <p class="labelhead">URL</p>
+                  <p class="labelhead">Logo</p>
+              </div>
+              <fieldset class="large-5 columns">
+                <legend class="labelhead"></legend>
+                <!--<input type="checkbox" onchange="document.getElementById('changeMe').innerHTML = 'Checked: ' + this.checked;" id="checkbox1"> -->
+                <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>
+                <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>
+                <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>
+                <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">
+              </fieldset>
+            </div>
+            <!--BASE CREATIVE TAGGING END-->
+            <!--ENDCARD TAGGING-->
+          <div class="small-12 text-center columns auto2">
+            <h5>End Card Tagging (Select All Fields That Apply)</h5>
+          </div>
+            <div class="row">
+              <div class="small-7 text-right columns">
+                  <p class="labelhead">URL</p>
+                  <p class="labelhead">Logo</p>
+                  <p class="labelhead">Dealer Details</p>
+                  <p class="labelhead">Dealer Name</p>
+                  <p class="labelhead">Address - Line 1</p>
+                  <p class="labelhead">Address - Line 2</p>
+                  <p class="labelhead">Phone</p>
+              </div>
+              <fieldset class="large-5 columns">
+                <legend class="labelhead"></legend>
+                <!--<input type="checkbox" onchange="document.getElementById('changeMe').innerHTML = 'Checked: ' + this.checked;" id="checkbox1"> -->
+                <input value="true" id="baseURL" name="baseURL" type="checkbox"><br>
+                <input value="true" id="baseLogo" name="baseLogo" type="checkbox"><br><br><br>
+               
+                <input value="true" id="baseDealer" name="baseDealer" type="checkbox"><br>
+                <input value="true" id="baseAddress1" name="baseAddress1" type="checkbox"><br>
+                <input value="true" id="baseAddress2" name="baseAddress2" type="checkbox"><br>
+                <input value="true" id="basePhone" name="basePhone" type="checkbox"><br>
+              </fieldset>
+            </div>
+              <!--ENDCARD TAGGING END-->
+             <hr>
+             
+             
+             
+             
+           <label>
+              Notes
+              <textarea class="labelhead" name="notes"></textarea>
+            </label>
+              <button class="button">Submit</button>
+          </form>    
+        </div> 
+</div><!--row END-->
 
 
 <div class="row">
@@ -48,11 +131,22 @@
 </div>
 
 <script>
- var check1 = document.getElementById('checkbox1');
- 
- check1.addEventListener('click', function(){
-  // alert(check1.value);
- });
+
+
+// var lower3rdLogo = document.getElementById('lower3rdLogo');
+
+// lower3rdLogo.addEventListener('change', function(){
+   
+//   var changeMe = document.getElementById('changeMe');
+//     if(lower3rdLogo.value === "true") {
+//       changeMe.innerHTML = 'Insert Some Stuff Here';
+//     }
+//     if(lower3rdLogo.value === undefined) {
+//       changeMe.innerHTML = '';
+//     } 
+// });
 </script>
 <% include ./partials/footer %>
+
+ 
 

@@ -3,6 +3,49 @@ body {
 }
 
 #imgContainer {
-    border:1px solid black;
+
     height: 700px;
 }
+
+
+
+.auto {
+    background:#CCB9E8;
+    color:white;
+    margin-bottom: 10px;
+}
+
+.auto2 {
+    background: #CCB9E8;
+    color:white;
+    margin-bottom: 10px;
+}
+
+.auto h4,
+.auto2 h5{
+   line-height: 0.5em;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   
+}
+
+
+
+.labelhead {
+    font-weight: bold;
+    font-size: .9em;
+}
+p.labelhead {
+    margin-top: 10px;
+}
+
+li, ul {
+    list-style-type: none;
+}
+
+#changeMe {
+
+  
+   
+}
+

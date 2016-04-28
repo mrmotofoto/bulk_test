@@ -1,20 +1,69 @@
 <% include ./partials/header %>
 <div class="row">
 <div class="small-12 text-center columns">
-  <h1>Confirm</h1>
+  <h1>Confirm Order</h1>
 </div>
+
+<table>
+  <thead>
+    <tr>
+     <th>Template</th>
+      <th>:24/:06</th>
+      <th>:25/:05</th>
+      <th>Custom</th>
+      <th>Lower3rd</th>
+      <th>Phone</th>
+      <th>URL</th>
+      <th>Logo</th>
+      <th>URL</th>
+      <th>Logo</th>
+      <th>Phone</th>
+      <th>Dealer</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= orderInvoice.code %></td>
+      <td><%= orderInvoice.timingbox1 %></td>
+      <td><%= orderInvoice.timingbox2 %></td>
+      <td><%= orderInvoice.cust_timing %></td>
+      <td><%= orderInvoice.lower3rdnull %></td>
+      <td><%= orderInvoice.lower3rdPhone %></td>
+      <td><%= orderInvoice.lower3rdURL %></td>
+      <td><%= orderInvoice.lower3rdLogo %></td>
+      <td><%= orderInvoice.baseURL %></td>
+      <td><%= orderInvoice.baseLogo %></td>
+      <td><%= orderInvoice.basePhone %></td>
+      <td><%= orderInvoice.baseDealer %></td>
+      <td><%= orderInvoice.baseAddress1 %></td>
+      <td><%= orderInvoice.baseAddress2 %></td>
+      <td><%= orderInvoice.notes %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
 
 <form action="/order/confirm" method="POST">
     <ul>
-    <li><%= orderInvoice.code %></li>
-     <li><%= orderInvoice.checkbox1 %></li>
-    <li><%= orderInvoice.checkbox2 %></li>
-    <li><%= orderInvoice.checkbox3 %></li>
-     <li><%= orderInvoice.notes %></li>
-</ul>
+
+    </ul>
  <button class="button">Submit</button>
 </form>
 
 
-
+ <!--code: code,-->
+ <!--       timingbox1: timingbox1,-->
+ <!--       timingbox2: timingbox2,-->
+ <!--       cust_timing: cust_timing,-->
+ <!--       lower3rdnull: lower3rdnull,-->
+ <!--       lower3rdPhone: lower3rdPhone,-->
+ <!--       lower3rdURL: lower3rdURL,-->
+ <!--       lower3rdLogo: lower3rdLogo,-->
+ <!--       notes: notes-->
 <% include ./partials/footer %>
