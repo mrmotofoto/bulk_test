@@ -2,7 +2,7 @@
 <% include ./partials/header %>
 
 <div class="row">
-    <div class="small-12 text-center columns">
+    <div id="mainTop" class="small-12 text-center columns">
       <h1>Bulk Upload</h1>
     </div>
 </div>
@@ -100,14 +100,14 @@
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
-                <!--<input type="checkbox" onchange="document.getElementById('changeMe').innerHTML = 'Checked: ' + this.checked;" id="checkbox1"> -->
+                <input type="checkbox" onchange="document.getElementById('changeMe').innerHTML = 'Checked: ' + this.checked;" id="checkbox1"> 
                 <input value="true" id="baseURL" name="baseURL" type="checkbox"><br>
                 <input value="true" id="baseLogo" name="baseLogo" type="checkbox"><br><br><br>
                
-                <input value="true" id="baseDealer" name="baseDealer" type="checkbox"><br>
-                <input value="true" id="baseAddress1" name="baseAddress1" type="checkbox"><br>
-                <input value="true" id="baseAddress2" name="baseAddress2" type="checkbox"><br>
-                <input value="true" id="basePhone" name="basePhone" type="checkbox"><br>
+                <input class="nudge" value="true" id="baseDealer" name="baseDealer" type="checkbox"><br>
+                <input class="nudge" value="true" id="baseAddress1" name="baseAddress1" type="checkbox"><br>
+                <input class="nudge" value="true" id="baseAddress2" name="baseAddress2" type="checkbox"><br>
+                <input class="nudge" value="true" id="basePhone" name="basePhone" type="checkbox"><br>
               </fieldset>
             </div>
               <!--ENDCARD TAGGING END-->

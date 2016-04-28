@@ -44,8 +44,30 @@ li, ul {
 }
 
 #changeMe {
-
+color:white;
   
    
 }
 
+input[name="cust_timing"] {
+    height: 30px;
+}
+
+
+#mainTop {
+    background:#2199e8;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+input[type="checkbox"] {
+    padding-top: 0px;
+    margin-top: 8px;
+    width: 20px;
+
+}
+
+input[type="checkbox"].nudge {
+    padding-top: -10px;
+    margin-top: -120px;
+}

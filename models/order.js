@@ -17,12 +17,13 @@ var orderSchema = new mongoose.Schema({
     baseAddress1: String,
     baseAddress2: String,
     notes: String,
+    active: 0,
     timestamp: Date
     
     // client: {
     //     id: {
     //       type: mongoose.Schema.Types.ObjectId,
-    //       ref: "User"
+    //       ref: "Client"
     //     },
     //     username: String
     // }

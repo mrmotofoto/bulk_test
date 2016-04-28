@@ -32,6 +32,7 @@ router.post('/order', function(req, res) {
     var baseAddress2 = req.body.baseAddress2 ? req.body.baseAddress2 : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
+    var active = 0;
 
 
     
@@ -51,6 +52,7 @@ router.post('/order', function(req, res) {
         baseAddress1: baseAddress1,
         baseAddress2: baseAddress2, 
         notes: notes,
+        active: active,
         timestamp: timestamp
     }
     
