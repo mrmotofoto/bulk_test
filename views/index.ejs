@@ -11,11 +11,14 @@
   
     <div id="imgContainer" class="small-7 columns">
       <h4>Automotive Checklist with Sample</h4>
-      <div class="small-12 columns" style="" id="changeMe">
+      <div class="small-12 columns" style="" id="bgColorDiv">
         
 <!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
         <div class="small-12 columns" id="baseLogoDiv">
           <p>Base Logo DIV</p>
+        </div>
+        <div class="small-12 columns" id="baseOfferDiv">
+          <p>Base Offer DIV</p>
         </div>
         <div class="small-12 columns" id="baseDealerDiv">
           <p>Base Dealer DIV</p>
@@ -26,9 +29,7 @@
         <div class="small-6 columns" id="baseAddress2Div">
           <p>Base Address2 DIV</p>
         </div>
-        <div class="small-12 columns" id="basePhoneDiv">
-          <p>Base Phone DIV</p>
-        </div>
+
         <div class="small-12 columns" id="baseURLDiv">
           <p>Base URL DIV</p>
         </div>
@@ -47,7 +48,7 @@
               <p class="labelhead">VW Endcard Template</p> 
           </div>
           <div class="small-7 columns">
-              <input placeholder="please enter code: DW002" name="code" type="text" aria-describedby="exampleHelpText">
+              <input placeholder="please enter code: DW002" name="code" type="text">
           </div>
           <hr>
           <!--ENDCARD FIELD END-->
@@ -81,25 +82,25 @@
           <!--TIMING FIELD END-->
 <!--*******************************************************************************       -->
           <!--BASE CREATIVE TAGGING-->
-          <div class="small-12 text-center columns auto2">
-            <h6>Creative Tagging - Lower 3rd Only</h6>
-          </div>
-            <div class="row">
-              <div class="small-7 text-right columns">
-                  <p class="labelhead">None</p>
-                  <p class="labelhead">Phone</p>
-                  <p class="labelhead">URL</p>
-                  <p class="labelhead">Logo</p>
-              </div>
-              <fieldset class="large-5 columns">
-                <legend class="labelhead"></legend>
+          <!--<div class="small-12 text-center columns auto2">-->
+          <!--  <h6>Creative Tagging - Lower 3rd Only</h6>-->
+          <!--</div>-->
+          <!--  <div class="row">-->
+          <!--    <div class="small-7 text-right columns">-->
+          <!--        <p class="labelhead">None</p>-->
+          <!--        <p class="labelhead">Phone</p>-->
+          <!--        <p class="labelhead">URL</p>-->
+          <!--        <p class="labelhead">Logo</p>-->
+          <!--    </div>-->
+          <!--    <fieldset class="large-5 columns">-->
+          <!--      <legend class="labelhead"></legend>-->
                 
-                <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>
-                <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>
-                <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>
-                <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">
-              </fieldset>
-            </div>
+          <!--      <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">-->
+          <!--    </fieldset>-->
+          <!--  </div>-->
             <!--BASE CREATIVE TAGGING END-->
 <!--*******************************************************************************       -->          
             <!--ENDCARD TAGGING-->
@@ -108,22 +109,25 @@
           </div>
             <div class="row">
               <div class="small-7 text-right columns">
-                  <p class="labelhead">URL</p>
+                  <p style="margin-bottom:32px;" class="labelhead">Background Color</p>
                   <p class="labelhead">Logo</p>
-                  <p class="labelhead">Dealer Details</p>
-                  <p class="labelhead">Dealer Name</p>
+                  <p class="labelhead">Offer</p>
+
+                  <p class="labelhead">Dealer 1 Name</p>
                   <p class="labelhead">Address - Line 1</p>
                   <p class="labelhead">Address - Line 2</p>
-                  <p class="labelhead">Phone</p>
+                  <p class="labelhead">URL</p>
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
-                <input value="true" id="baseURL" name="baseURL" data-div="baseURLDiv" type="checkbox"><br>
-                <input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox"><br><br><br>
+                <input type="color" name="bgColor" id="bgColor" value="#2199e8">
+                <input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox"><br>
+                <input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>
                 <input class="nudge" value="true" id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="checkbox"><br>
                 <input class="nudge" value="true" id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="checkbox"><br>
                 <input class="nudge" value="true" id="baseAddress2" name="baseAddress2" data-div="baseAddress2Div" type="checkbox"><br>
-                <input class="nudge" value="true" id="basePhone" name="basePhone" data-div="basePhone" type="checkbox"><br>
+                
+                <input value="true" id="baseURL" name="baseURL" data-div="baseURLDiv" type="checkbox"><br>
               </fieldset>
             </div>
               <!--ENDCARD TAGGING END-->
@@ -138,7 +142,10 @@
         </div> 
 </div><!--row END-->
 
+<script>
 
+  
+</script>
 
 <% include ./partials/footer %>
 

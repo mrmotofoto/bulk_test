@@ -25,13 +25,13 @@ body {
 }
 
 .auto h4,
-.auto2 h5{
+.auto2 h5,
+.auto2 h6{
    line-height: 0.5em;
    padding-top: 10px;
    padding-bottom: 5px;
    
 }
-
 
 
 .labelhead {
@@ -51,7 +51,7 @@ li, ul {
 #baseDealerDiv,
 #baseAddress1Div,
 #baseAddress2Div,
-#basePhoneDiv {
+#baseOfferDiv {
     opacity: 0;
     color:white;
     font-family: Oswald;
@@ -80,14 +80,13 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"].nudge {
-    padding-top: -10px;
-    margin-top: -120px;
+    /*padding-top: -10px;*/
+    /*margin-top: -120px;*/
 }
 
-#changeMe {
-    background-image: url(http://res.cloudinary.com/djangoles/image/upload/v1461874263/volvo2_hplzp0.jpg); 
-    background-repeat: no-repeat;
+#bgColorDiv {
+   
+    height: 500px;
 
-    height: 600px;
 
 }
