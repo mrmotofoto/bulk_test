@@ -11,6 +11,7 @@ var orderSchema = new mongoose.Schema({
     baseOffer: String,
     baseDealer: String,
     baseAddress1: String,
+    baseLocation1: String,
     baseURL: String,
     notes: String,
     active: 0,

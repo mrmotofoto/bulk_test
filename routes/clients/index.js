@@ -26,6 +26,7 @@ router.post('/order', function(req, res) {
     var baseOffer = req.body.baseOffer ? req.body.baseOffer : inputDefault;
     var baseDealer = req.body.baseDealer ? req.body.baseDealer : inputDefault;
     var baseAddress1 = req.body.baseAddress1 ? req.body.baseAddress1 : inputDefault;
+    var baseLocation1 = req.body.baseLocation1 ? req.body.baseLocation1 : inputDefault;
     var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
@@ -47,6 +48,7 @@ router.post('/order', function(req, res) {
         bgColor: bgColor,
         baseDealer: baseDealer,
         baseAddress1: baseAddress1,
+        baseLocation1: baseLocation1,
         baseURL: baseURL,
         notes: notes,
         active: active,
@@ -71,6 +73,9 @@ router.post('/order', function(req, res) {
 
   
 });
+
+
+
 
 router.post('/order/confirm', function(req, res) {
     res.render('confirm')

@@ -16,14 +16,14 @@ function toggleDiv(checkbox, divId) {
 }
 
 function fillDiv(inputbox, divId) {
-    // Grabbing ID OF DIV TO Fill-----------------------------------------------
+    // Grabbing ID OF DIV TO Fill WITH TEXT-------------------------------------
     var divId = document.getElementById(divId);
-    divId.style.display = "block"
+    divId.style.display = "block";
     divId.innerHTML = inputbox.value;
 }
 
-
 function fillBgColor(colorpick, divId) {
+    // Grabbing ID OF DIV TO FILL WITH BG COLOR---------------------------------
   var divId = document.getElementById(divId);
   divId.style.background = colorpick.value;
   console.log(colorpick.value);
@@ -41,16 +41,16 @@ _('baseURL').onclick = function() {
 };
 
 _('baseLogo').onclick = function() {
-    toggleDiv(this, 'baseLogoDiv');
+    toggleDiv(this, "baseLogoDiv");
 };
 
-_('baseDealer').onclick = function() {
-    toggleDiv(this, 'baseDealerDiv'); 
-};
+// _('baseDealer').onclick = function() {
+//     toggleDiv(this, "baseDealerDiv"); 
+// };
 
-_('baseAddress1').onclick = function() {
-    toggleDiv(this, 'baseAddress1Div'); 
-};
+// _('baseAddress1').onclick = function() {
+//     toggleDiv(this, "baseAddress1Div"); 
+// };
 
 
 //------------------------------------------------------------------------------
@@ -62,10 +62,28 @@ _('bgColor').onchange = function() {
 };
 
 
+//------------------------------------------------------------------------------
+//========================INPUT TEXT UPDATE DIV=================================
+//------------------------------------------------------------------------------
 _('baseOffer').onchange = function() {
+    console.log(this.value);
     fillDiv(this, 'baseOfferDiv'); 
 };
 
+_('baseDealer').onblur = function() {
+     console.log(this.value);
+     fillDiv(this, 'baseDealerDiv'); 
+};
+
+_('baseAddress1').onblur = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseAddress1Div'); 
+};
+
+_('baseLocation1').onblur = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseLocation1Div'); 
+};
 
 
 

@@ -1,11 +1,7 @@
-
-
 #imgContainer {
-
     height: 700px;
 }
-
-
+/*FORM FIELD HEADERS*/
 .auto {
     background:#CCB9E8;
     color:white;
@@ -39,18 +35,19 @@ li, ul {
     list-style-type: none;
 }
 
+
+
 #baseURLDiv,
-#baseLogoDiv,
-#baseDealerDiv,
-#baseAddress1Div,
-#baseOfferDiv {
+#baseLogoDiv {
     opacity: 0;
     color:white;
     font-family: Oswald;
-
 }
 
-#baseOfferDiv {
+#baseOfferDiv,
+#baseDealerDiv,
+#baseAddress1Div,
+#baseLocation1Div {
     opacity: 1;
     color:white;
     font-family: Oswald;  
@@ -81,16 +78,17 @@ margin-top: 10px;
 }
 
 #baseDealerDiv,
-#baseAddress1Div{
+#baseAddress1Div,
+#baseLocation1Div {
 font-family: 'Passion One', cursive;
 height: 25px;
 text-align: center;
 font-size: 1.5em;
-
 }
 
 
-#baseURLDiv{
+
+#baseURLDiv {
 font-family: 'Passion One', cursive;
 height: 25px;
 text-align: center;
@@ -98,14 +96,13 @@ font-size: 1.4em;
 margin-top: 130px;
 }
 
-#baseDealerDiv p { 
-
-
-}    
-
+ 
 
 input[name="cust_timing"],
-input[name="baseOffer"]{
+input[name="baseOffer"],
+input[name="baseDealer"],
+input[name="baseAddress1"],
+input[name="baseLocation1"]{
     height: 30px;
 }
 
