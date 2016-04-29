@@ -14,6 +14,9 @@
       <div style="background-image: url(http://res.cloudinary.com/djangoles/image/upload/v1461874263/volvo2_hplzp0.jpg); background-repeat: no-repeat; height: 100%; width: 100%;" id="changeMe">
         
         <!-----------------DYNAMIC CONTENT WILL GO HERE------------------------>
+        <div id="baseURLDiv">
+          <p>testurl.com</p>
+        </div>
       </div>
     </div>
   
@@ -100,7 +103,6 @@
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
-                <input type="checkbox" onchange="document.getElementById('changeMe').innerHTML = 'Checked: ' + this.checked;" id="checkbox1"> 
                 <input value="true" id="baseURL" name="baseURL" type="checkbox"><br>
                 <input value="true" id="baseLogo" name="baseLogo" type="checkbox"><br><br><br>
                
@@ -131,20 +133,21 @@
 </div>
 
 <script>
+document.getElementById('baseURL').onclick = function() {
+    toggleDiv(this, 'baseURLDiv');
+};
 
+function toggleDiv(checkbox, divId) {
+    // get reference to related content to display/hide--------
+    var divId = document.getElementById(divId);
+    
+    if ( checkbox.checked ) {
+        divId.style.display = 'block';
+    } else {
+        divId.style.display = 'none';
+    }
+}
 
-// var lower3rdLogo = document.getElementById('lower3rdLogo');
-
-// lower3rdLogo.addEventListener('change', function(){
-   
-//   var changeMe = document.getElementById('changeMe');
-//     if(lower3rdLogo.value === "true") {
-//       changeMe.innerHTML = 'Insert Some Stuff Here';
-//     }
-//     if(lower3rdLogo.value === undefined) {
-//       changeMe.innerHTML = '';
-//     } 
-// });
 </script>
 <% include ./partials/footer %>
 

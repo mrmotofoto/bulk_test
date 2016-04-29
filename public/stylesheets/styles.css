@@ -43,11 +43,14 @@ li, ul {
     list-style-type: none;
 }
 
-#changeMe {
-color:white;
-  
-   
+#baseURLDiv {
+    display: none;
+    color:white;
+    font-family: Oswald;
+    text-align: center;
 }
+
+
 
 input[name="cust_timing"] {
     height: 30px;
