@@ -16,44 +16,48 @@ router.get('/', function(req, res) {
 
 router.post('/order', function(req, res) {
     var inputDefault = "false";
+    var colorDefault = "#FFFFFF";
     var code = req.body.code ? req.body.code : inputDefault;
     var timingbox1 = req.body.timingbox1 ? req.body.timingbox1 : inputDefault;
     var timingbox2 = req.body.timingbox2 ? req.body.timingbox2 : inputDefault;
     var cust_timing = req.body.cust_timing ? req.body.cust_timing : inputDefault;;
-    var lower3rdnull = req.body.lower3rdnull ? req.body.lower3rdnull : inputDefault;
-    var lower3rdPhone = req.body.lower3rdPhone ? req.body.lower3rdPhone : inputDefault;
-    var lower3rdURL = req.body.lower3rdURL ? req.body.lower3rdURL : inputDefault;
-    var lower3rdLogo = req.body.lower3rdLogo ? req.body.lower3rdLogo : inputDefault;
-    var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
+    var bgColor = req.body.bgColor ? req.body.bgColor : colorDefault;
     var baseLogo = req.body.baseLogo ? req.body.baseLogo : inputDefault;
-    var basePhone = req.body.basePhone ? req.body.basePhone : inputDefault;
+    var baseOffer = req.body.baseOffer ? req.body.baseOffer : inputDefault;
     var baseDealer = req.body.baseDealer ? req.body.baseDealer : inputDefault;
     var baseAddress1 = req.body.baseAddress1 ? req.body.baseAddress1 : inputDefault;
-    var baseAddress2 = req.body.baseAddress2 ? req.body.baseAddress2 : inputDefault;
+    var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
     var active = 0;
 
+// var lower3rdnull = req.body.lower3rdnull ? req.body.lower3rdnull : inputDefault;
+// var lower3rdPhone = req.body.lower3rdPhone ? req.body.lower3rdPhone : inputDefault;
+// var lower3rdURL = req.body.lower3rdURL ? req.body.lower3rdURL : inputDefault;
+// var lower3rdLogo = req.body.lower3rdLogo ? req.body.lower3rdLogo : inputDefault;
+// var baseAddress2 = req.body.baseAddress2 ? req.body.baseAddress2 : inputDefault;
 
-    
     var orderInvoice = {
         code: code,
         timingbox1: timingbox1,
         timingbox2: timingbox2,
         cust_timing: cust_timing,
-        lower3rdnull: lower3rdnull,
-        lower3rdPhone: lower3rdPhone,
-        lower3rdURL: lower3rdURL,
-        lower3rdLogo: lower3rdLogo,
-        baseURL: baseURL,
         baseLogo: baseLogo,
-        basePhone: basePhone,
+        baseOffer: baseOffer,
+        bgColor: bgColor,
         baseDealer: baseDealer,
         baseAddress1: baseAddress1,
-        baseAddress2: baseAddress2, 
+        baseURL: baseURL,
         notes: notes,
         active: active,
         timestamp: timestamp
+        
+// baseAddress2: baseAddress2,
+// lower3rdnull: lower3rdnull,
+// lower3rdPhone: lower3rdPhone,
+// lower3rdURL: lower3rdURL,
+// lower3rdLogo: lower3rdLogo,
+
     }
     
  Order.create(orderInvoice, function(err, orderInvoice) {

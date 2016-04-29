@@ -15,23 +15,21 @@
         
 <!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
         <div class="small-12 columns" id="baseLogoDiv">
-          <p>Base Logo DIV</p>
+          <img src="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">
         </div>
         <div class="small-12 columns" id="baseOfferDiv">
-          <p>Base Offer DIV</p>
+          <p></p>
         </div>
         <div class="small-12 columns" id="baseDealerDiv">
-          <p>Base Dealer DIV</p>
+          <p>John Smith</p>
         </div>
-        <div class="small-6 columns" id="baseAddress1Div">
-          <p>Base Address1 DIV</p>
+        <div class="small-12 columns" id="baseAddress1Div">
+          <p>1313 Mockingbird Lane</p>
+          <p style="margin-top:-30px;">AnyTown, USA 12345</p> 
+         
         </div>
-        <div class="small-6 columns" id="baseAddress2Div">
-          <p>Base Address2 DIV</p>
-        </div>
-
         <div class="small-12 columns" id="baseURLDiv">
-          <p>Base URL DIV</p>
+          <p>www.someurl.com</p>
         </div>
 <!-----------------END DYNAMIC CONTENT ---------------------------------------->       
       </div>
@@ -75,7 +73,7 @@
            <div class="small-3 columns">
               <fieldset>
               <legend class="labelhead">Custom</legend>
-              <input name="cust_timing" type="text" aria-describedby="exampleHelpText">
+              <input name="cust_timing" type="text">
               </fieldset>
           </div>
           <hr>
@@ -113,19 +111,20 @@
                   <p class="labelhead">Logo</p>
                   <p class="labelhead">Offer</p>
 
-                  <p class="labelhead">Dealer 1 Name</p>
-                  <p class="labelhead">Address - Line 1</p>
-                  <p class="labelhead">Address - Line 2</p>
+                  <p class="labelhead">Dealer Name</p>
+                  <p class="labelhead">Address</p>
+
                   <p class="labelhead">URL</p>
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
                 <input type="color" name="bgColor" id="bgColor" value="#2199e8">
                 <input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox"><br>
-                <input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>
+                <input name="baseOffer" id="baseOffer" type="text">
+                <!--<input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>-->
                 <input class="nudge" value="true" id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="checkbox"><br>
                 <input class="nudge" value="true" id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="checkbox"><br>
-                <input class="nudge" value="true" id="baseAddress2" name="baseAddress2" data-div="baseAddress2Div" type="checkbox"><br>
+               
                 
                 <input value="true" id="baseURL" name="baseURL" data-div="baseURLDiv" type="checkbox"><br>
               </fieldset>

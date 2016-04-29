@@ -1,24 +1,8 @@
-//  var checks = document.querySelectorAll('input[type="checkbox"]');
-  
-//  for(var i = 0; i < checks.length; i++) {
-//     var checkID = checks[i].id
-//     var datadiv = checks[i].dataset.div;
-//     console.log(datadiv, checkID);
-// }
-
-// clickedCheckBox(checkID).onclick = function() {
-// toggleDiv(this, datadiv);
-// };
-
-
-
-
-
-
-
-
-function clickedCheckBox(checkboxID) {
-  return document.getElementById(checkboxID);
+//------------------------------------------------------------------------------
+//===================CHECK BOX FILL DIV SECTION=================================
+//------------------------------------------------------------------------------
+function _(inputField) {
+  return document.getElementById(inputField);
 }
 
 function toggleDiv(checkbox, divId) {
@@ -31,52 +15,80 @@ function toggleDiv(checkbox, divId) {
     }
 }
 
-// WORKS BUT WOULD LIKE TO REFACTOR---------------------------------------------
-clickedCheckBox('baseURL').onclick = function() {
+function fillDiv(inputbox, divId) {
+    // Grabbing ID OF DIV TO Fill-----------------------------------------------
+    var divId = document.getElementById(divId);
+    divId.style.display = "block"
+    divId.innerHTML = inputbox.value;
+}
+
+
+function fillBgColor(colorpick, divId) {
+  var divId = document.getElementById(divId);
+  divId.style.background = colorpick.value;
+  console.log(colorpick.value);
+}
+
+
+// WORKS BUT WOULD LIKE TO REFACTOR!!!!!!!!-------------------------------------
+
+//------------------------------------------------------------------------------
+//========================TOGGLE CHECK BOXES====================================
+//------------------------------------------------------------------------------
+
+_('baseURL').onclick = function() {
     toggleDiv(this, "baseURLDiv");
 };
 
-clickedCheckBox('baseLogo').onclick = function() {
+_('baseLogo').onclick = function() {
     toggleDiv(this, 'baseLogoDiv');
 };
 
-clickedCheckBox('baseDealer').onclick = function() {
+_('baseDealer').onclick = function() {
     toggleDiv(this, 'baseDealerDiv'); 
 };
 
-clickedCheckBox('baseAddress1').onclick = function() {
+_('baseAddress1').onclick = function() {
     toggleDiv(this, 'baseAddress1Div'); 
 };
 
-clickedCheckBox('baseAddress2').onclick = function() {
-    toggleDiv(this, 'baseAddress2Div'); 
+
+//------------------------------------------------------------------------------
+//========================CHANGE BACKGROUND COLOR===============================
+//------------------------------------------------------------------------------
+
+_('bgColor').onchange = function() {
+    fillBgColor(this, 'bgColorDiv');
 };
 
-clickedCheckBox("baseOffer").onclick = function() {
-    toggleDiv(this, 'baseOfferDiv'); 
+
+_('baseOffer').onchange = function() {
+    fillDiv(this, 'baseOfferDiv'); 
 };
 
 
 
-// function colorWheelBox(colorWheel) {
-//   return document.getElementById(colorWheel);
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+//========================TESTING AREA===========================================
+//------------------------------------------------------------------------------
+
+//  var checks = document.querySelectorAll('input[type="checkbox"]');
+  
+//  for(var i = 0; i < checks.length; i++) {
+//     var checkID = checks[i].id
+//     var datadiv = checks[i].dataset.div;
+//     console.log(datadiv, checkID);
 // }
 
-// function changeColor(colorSelection, divId) {
-//     // Grabbing ID OF DIV TO CHANGE COLOR---------------------------------------
-//     var divId = document.getElementById(divId);
-//     if (checkbox.checked) {
-//         divId.style.opacity = '1';
-//     } else {
-//         divId.style.opacity = '0';
-//     }
-// }
-
-var bgColor = document.getElementById('bgColor');
-var bgColorDiv = document.getElementById('bgColorDiv');
-
-bgColor.addEventListener("change", function(){
-  bgColorDiv.style.background = this.value;
-  console.log(this.value);
-});
+// clickedCheckBox(checkID).onclick = function() {
+// toggleDiv(this, datadiv);
+// };
 
