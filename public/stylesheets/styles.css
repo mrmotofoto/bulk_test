@@ -1,6 +1,19 @@
-#imgContainer {
-    height: 700px;
+/*BASE STYLES*/
+li, ul {
+    list-style-type: none;
 }
+
+td img {
+    width: 50px;
+}
+
+#mainTop {
+    background:#2199e8;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
 /*FORM FIELD HEADERS*/
 .auto {
     background:#CCB9E8;
@@ -25,17 +38,29 @@
 .labelhead {
     font-weight: bold;
     font-size: .9em;
+    
 }
 
 p.labelhead {
     margin-top: 10px;
 }
 
-li, ul {
-    list-style-type: none;
+
+/*DYNAMIC DIVS*/
+#imgContainer {
+    text-align: center;
+    
 }
 
+#imgContainer h4 {
+    font-weight: bold;
+    font-size: 1.9em;
+}
 
+#bgColorDiv {
+    height: 400px;
+    border:1px solid #DDD;
+}
 
 #baseURLDiv,
 #baseLogoDiv {
@@ -44,10 +69,16 @@ li, ul {
     font-family: Oswald;
 }
 
+#baseLogoDiv {
+    opacity: 1;
+    display: block;
+}
+
 #baseOfferDiv,
 #baseDealerDiv,
 #baseAddress1Div,
-#baseLocation1Div {
+#baseLocation1Div,
+#baseURLDiv {
     opacity: 1;
     color:white;
     font-family: Oswald;  
@@ -56,25 +87,32 @@ li, ul {
 #baseLogoDiv img {
     text-align: center;
     width: 18%;
-    margin-top: 50px;
-    
+    margin-top: 25px;
 }
+
+
 
 #baseLogoDiv {
   background:none;
   text-align: center;
 }
 
-#baseOfferDiv {
-margin-top: 10px;
-  
+#baseURLDiv {
+    font-family: 'Passion One', cursive;
+    height: 25px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 80px;
+/*color:black;*/
 }
+
 
 #baseOfferDiv {
     font-family: 'Passion One', cursive;
     font-weight: bold;
     font-size: 2.7em;
     text-align: center;
+    margin-top: 10px;
 }
 
 #baseDealerDiv,
@@ -87,31 +125,30 @@ font-size: 1.5em;
 }
 
 
-
-#baseURLDiv {
-font-family: 'Passion One', cursive;
-height: 25px;
-text-align: center;
-font-size: 1.4em;
-margin-top: 130px;
-}
-
- 
-
+/*INPUT FIELDS*/
 input[name="cust_timing"],
 input[name="baseOffer"],
 input[name="baseDealer"],
 input[name="baseAddress1"],
-input[name="baseLocation1"]{
+input[name="baseLocation1"],
+input[name="baseURL"],
+input[name="baseLogo"],
+select {
     height: 30px;
 }
 
+select {
+    height: 37px;
+    
+}
 
-#mainTop {
-    background:#2199e8;
-    margin-top: 30px;
+input[name="bgColor"] {
+    width: 60px;
+    height: 60px;;
+}
+
+input[name="baseLogo"] {
     margin-bottom: 20px;
-    color: white;
 }
 
 input[type="checkbox"] {
@@ -120,7 +157,24 @@ input[type="checkbox"] {
     width: 20px;
 }
 
-
-#bgColorDiv {
-    height: 500px;
+#formContainer {
+    margin-top:0px;
+    margin-top: 6px;
+    
 }
+
+#formContainer h4 {
+    font-weight: bold;
+    font-size: 1.9em;
+    text-align: center;
+   
+    
+}
+
+
+
+
+
+
+
+

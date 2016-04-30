@@ -14,7 +14,7 @@ var orderSchema = new mongoose.Schema({
     baseLocation1: String,
     baseURL: String,
     notes: String,
-    active: 0,
+    approved: 0,
     timestamp: Date
   
 // lower3rdnull: String,

@@ -30,7 +30,7 @@ router.post('/order', function(req, res) {
     var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
-    var active = 0;
+    var approved = 0;
 
 // var lower3rdnull = req.body.lower3rdnull ? req.body.lower3rdnull : inputDefault;
 // var lower3rdPhone = req.body.lower3rdPhone ? req.body.lower3rdPhone : inputDefault;
@@ -51,7 +51,7 @@ router.post('/order', function(req, res) {
         baseLocation1: baseLocation1,
         baseURL: baseURL,
         notes: notes,
-        active: active,
+        approved: approved,
         timestamp: timestamp
         
 // baseAddress2: baseAddress2,
@@ -66,12 +66,10 @@ router.post('/order', function(req, res) {
       if(err) {
           console.log(err);
       }  else {
-          console.log(orderInvoice);
+           console.log(orderInvoice);
            res.render('order', {orderInvoice: orderInvoice});
          }
     }); 
-
-  
 });
 
 

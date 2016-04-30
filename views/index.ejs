@@ -10,12 +10,13 @@
 <div class="row">
   
     <div id="imgContainer" class="small-7 columns">
-      <h4>Automotive Checklist with Sample</h4>
+      <h4>Endcard Sample</h4>
       <div class="small-12 columns" style="" id="bgColorDiv">
+
         
 <!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
         <div class="small-12 columns" id="baseLogoDiv">
-          <img src="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">
+          <img src="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">
         </div>
         <div class="small-12 columns" id="baseOfferDiv">
           <p></p>
@@ -30,15 +31,15 @@
           <p></p>
         </div>
         <div class="small-12 columns" id="baseURLDiv">
-          <p>www.someurl.com</p>
+          <p></p>
         </div>
 <!-----------------END DYNAMIC CONTENT ---------------------------------------->       
       </div>
     </div>
-  
-      <div class="small-5 columns"><!--RIGHT SIDE FORM START-->
-          
+      <div class="small-5 columns" id="formContainer"><!--RIGHT SIDE FORM START-->
+          <h4>Endcard CheckList</h4>
           <div class="small-12 text-center columns auto">
+
             <h4>Automotive</h4>
           </div>
           <!--ENDCARD FIELD-->
@@ -108,27 +109,34 @@
           </div>
             <div class="row">
               <div class="small-7 text-right columns">
-                  <p style="margin-bottom:32px;" class="labelhead">Background Color</p>
-                  <p class="labelhead">Logo</p>
-                  <p class="labelhead">Offer</p>
-                  <p class="labelhead">Dealer Name</p>
-                  <p class="labelhead">Address</p>
-                  <p class="labelhead">Location</p>
+                  <p style="margin-top:28px; margin-bottom:35px;" class="labelhead">Background Color</p>
+                  <p style="margin-bottom:25px;"class="labelhead">Logo</p>
+                  <p style="margin-bottom:25px;" class="labelhead">Offer</p>
+                  <p style="margin-bottom:23px;" class="labelhead">Dealer Name</p>
+                  <p style="margin-bottom:24px;" class="labelhead">Address</p>
+                  <p style="margin-bottom:24px;" class="labelhead">Location</p>
                   <p class="labelhead">URL</p>
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
                 <input type="color" name="bgColor" id="bgColor" value="#2199e8">
-                <input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox"><br>
+                <select id="baseLogo" name="baseLogo" data-div="baseLogoDiv">
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">Select Logo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">Volvo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462015964/saab_xsp4lz.png">Saab</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462018327/VW_ALPHA_zqbevy.png">Volkswagon</option>
+                </select>
+                <!--<input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="select">-->
                 <input name="baseOffer" id="baseOffer" type="text">
-                <!--<input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>-->
-                <!--<input class="nudge" value="true" id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="checkbox"><br>-->
-                <!--<input class="nudge" value="true" id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="checkbox"><br>-->
                 <input name="baseDealer" id="baseDealer" type="text">
-                <!--<input id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="text">-->
                 <input id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="text">
                 <input id="baseLocation1" name="baseLocation1" data-div="baseLocation1Div" type="text">
-                <input value="true" id="baseURL" name="baseURL" data-div="baseURLDiv" type="checkbox"><br>
+                <input id="baseURL" name="baseURL" data-div="baseURLDiv" type="text">
+<!--<input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox">-->
+<!--<input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>-->
+<!--<input class="nudge" value="true" id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="checkbox"><br>-->
+<!--<input class="nudge" value="true" id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="checkbox"><br>-->
+<!--<input id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="text">-->
               </fieldset>
             </div>
               <!--ENDCARD TAGGING END-->
@@ -136,7 +144,7 @@
              
            <label>
               Notes
-              <textarea class="labelhead" name="notes"></textarea>
+              <textarea rows="7" class="labelhead" name="notes"></textarea>
             </label>
               <button class="button">Submit</button>
           </form>    
