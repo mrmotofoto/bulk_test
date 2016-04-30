@@ -17,7 +17,7 @@ var Order = require('./models/order');
 // var commentRoutes = require('./routes/*');
 // var clubRoutes = require('./routes/*');
 
-var indexRoutes = require('./routes/clients');
+var autoRoutes = require('./routes/auto');
 mongoose.connect('mongodb://localhost/bulk_upload_test');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,7 +29,7 @@ app.use(express.static(__dirname + "/public"));
 
 
 
-app.use(indexRoutes);
+app.use(autoRoutes);
 //app.use("/clubs/:id/comments",commentRoutes);
 //app.use("/clubs", clubRoutes);
 

@@ -8,11 +8,39 @@ var Order = require('../../models/order');
 
 
 router.get('/', function(req, res) {
-   res.render('index'); 
+    Order.find({}, function(err, data) {
+           if(err) {
+               console.log(err);
+           } else {
+                res.render('index', {orders: data});
+           }
+        });    
+});  
+
+
+//SHOW ALL ORDERS--------------------------------
+router.get('/orders', function(req, res) {
+    Order.find({}, function(err, data) {
+       if(err) {
+           console.log(err);
+       } else {
+            res.render('index', {orders: data});
+       }
+    });    
 });
 
+//SHOW ORDER FORM--------------------------------
+router.get('/orders/new', function(req, res) {
+   res.render('new'); 
+});
 
-router.post('/order', function(req, res) {
+//SHOW ONE ORDER--------------------------------
+router.get('/orders/:id', function(req, res) {
+   res.render('show'); 
+});
+
+//CREATE NEW ORDER--------------------------------
+router.post('/orders', function(req, res) {
     var inputDefault = "false";
     var colorDefault = "#FFFFFF";
     var baseCode = req.body.baseCode ? req.body.baseCode : inputDefault;
@@ -28,7 +56,7 @@ router.post('/order', function(req, res) {
     var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
-    var approved = 0;
+    var approved = 1;
 
 
     var orderInvoice = {
@@ -52,22 +80,22 @@ router.post('/order', function(req, res) {
       if(err) {
           console.log(err);
       }  else {
-           console.log(orderInvoice);
-           res.render('order', {orderInvoice: orderInvoice});
+            res.redirect('/orders');
          }
     }); 
 });
 
-router.get('/order/:id/edit', function(req, res) {
+
+
+
+
+//GET EDIT EXISTING ORDER FORM-------------------------------
+router.get('/orders/:id/edit', function(req, res) {
  Order.findById(req.params.id, function(err, foundOrder) {
      if(err) {
          throw err;
      }
-     console.log(req.params.id);
-        // if(err) {
-        //     throw err;
-        // }
-        res.render("edit");    
+    res.render("edit", {foundOrder : foundOrder});    
  });    
 });
 

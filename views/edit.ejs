@@ -1,8 +1,18 @@
 <h1>EDIT PAGE</h1>
 <h2>
-hey dhshshs   
+THIS IS EDIT PAGE  
 </h2>
 
 <h2>
-   
+ <%= foundOrder._id %>  
 </h2>
+
+<h2>
+ <%= foundOrder.baseOffer %>  
+</h2>
+
+<h2>
+ <%= foundOrder.baseDealer %>  
+</h2>
+
+<form action="/orders/<%= foundOrder._id %>?_method=PUT" method="POST"></form>

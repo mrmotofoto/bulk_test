@@ -1,0 +1,201 @@
+
+<% include ./partials/header %>
+
+<div class="row">
+    <div id="mainTop" class="small-12 text-center columns">
+      <h1>Bulk Upload</h1>
+    </div>
+</div>
+
+<div class="row" id="mainContainer">
+  
+    <div id="imgContainer" class="small-7 columns">
+      <h4>Endcard Sample <span id="baseCodeDIV"></span></h4>
+      <div class="small-12 columns" style="" id="bgColorDiv">
+
+        
+<!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
+        <div class="small-12 columns" id="baseLogoDiv">
+          <img src="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">
+        </div>
+        <div class="small-12 columns" id="baseOfferDiv">
+          <p></p>
+        </div>
+        <div class="small-12 columns" id="baseDealerDiv">
+          <p></p>
+        </div>
+        <div class="small-12 columns" id="baseAddress1Div">
+          <p></p>
+        </div>
+        <div class="small-12 columns" id="baseLocation1Div">
+          <p></p>
+        </div>
+        <div class="small-12 columns" id="baseURLDiv">
+          <p></p>
+        </div>
+        
+        <div class="small-12 columns" id="baseURLDiv">
+          <p></p>
+        </div>
+
+        
+<!-----------------END DYNAMIC CONTENT ---------------------------------------->       
+      </div>
+    </div>
+      <div class="small-5 columns" id="formContainer"><!--RIGHT SIDE FORM START-->
+          <h4>Endcard CheckList</h4>
+          <div class="small-12 text-center columns auto">
+
+            <h4>Automotive</h4>
+          </div>
+          <!--ENDCARD FIELD-->
+          <div class="small-5 columns">
+            <form action="./order" method="POST">
+              <p class="labelhead">VW Endcard Template</p> 
+          </div>
+          <div class="small-7 columns">
+              <input placeholder="please enter code: DW002" name="baseCode" id="baseCode" data-div="baseCodeDIV" type="text">
+          </div>
+          <hr>
+          <!--ENDCARD FIELD END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       -->          
+          <!--TIMING FIELD-->
+          <div class="small-5 columns">
+              <p class="labelhead">Timing Configuration</p> 
+          </div>
+          
+         <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:24/:06</legend>
+              <input value=":24/:06" id="timingbox1" name="timingbox1" type="checkbox" data-div="timingbox1DIV">
+            </fieldset>
+          </div>
+          
+           <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:25/:05</legend>
+              <input value=":25/:05" id="timingbox2" name="timingbox2" type="checkbox" data-div="timingbox2DIV">
+            </fieldset>
+          </div>
+    
+           <div class="small-3 columns">
+              <fieldset>
+              <legend class="labelhead">Custom</legend>
+              <input name="cust_timing" type="text">
+              </fieldset>
+          </div>
+          <hr>
+          <!--TIMING FIELD END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       -->          
+            <!--ENDCARD TAGGING-->
+          <div class="small-12 text-center columns auto2">
+            <h6>Base End Tagging (Select All Fields That Apply)</h6>
+          </div>
+            <div class="row">
+              <div class="small-7 text-right columns">
+                  <p style="margin-top:28px; margin-bottom:35px;" class="labelhead">Background Color</p>
+                  <p style="margin-bottom:25px;"class="labelhead">Logo</p>
+                  <p style="margin-bottom:25px;" class="labelhead">Offer</p>
+                  <p style="margin-bottom:23px;" class="labelhead">Dealer Name</p>
+                  <p style="margin-bottom:24px;" class="labelhead">Address</p>
+                  <p style="margin-bottom:24px;" class="labelhead">Location</p>
+                  <p class="labelhead">URL</p>
+              </div>
+              <fieldset class="large-5 columns">
+                <legend class="labelhead"></legend>
+                <input type="color" name="bgColor" id="bgColor" value="#2199e8">
+                <select id="baseLogo" name="baseLogo" data-div="baseLogoDiv">
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">Select Logo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">Volvo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462015964/saab_xsp4lz.png">Saab</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462018327/VW_ALPHA_zqbevy.png">Volkswagon</option>
+                </select>
+                <input name="baseOffer" id="baseOffer" type="text">
+                <input name="baseDealer" id="baseDealer" type="text">
+                <input id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="text">
+                <input id="baseLocation1" name="baseLocation1" data-div="baseLocation1Div" type="text">
+                <input id="baseURL" name="baseURL" data-div="baseURLDiv" type="text">
+              </fieldset>
+            </div>
+              <!--ENDCARD TAGGING END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       --> 
+             <hr>
+             
+           <label>
+              Notes
+              <textarea rows="7" class="labelhead" name="notes"></textarea>
+            </label>
+              <button class="button">Submit</button>
+          </form>    
+        </div> 
+</div><!--row END-->
+
+<script>
+
+  
+</script>
+
+<% include ./partials/footer %>
+
+
+
+
+
+
+
+
+<!-- ====================================================================== -->
+<!--CHECK BOX TEST SECTION -->
+<!-- ====================================================================== -->
+
+<!--<h1>CHECKBOX TEST SECTION</h1>-->
+<!--<div class="small-12 columns" id="testCheck1DIV">-->
+<!--    <p>TESTING</p>-->
+<!--</div>-->
+<!-- <div class="small-12 columns" id="testCheck2DIV">-->
+<!--    <p>TESTING2</p>-->
+<!--</div>-->
+
+<!--<div class="small-12 columns" id="testCheck3DIV">-->
+<!--    <p>TESTING3</p>-->
+<!--</div>-->
+
+<!--<div class="small-12 columns" id="testCheck4DIV">-->
+<!--    <p>TESTING4</p>-->
+<!--</div>-->
+
+   
+<!--<input value="true" id="testCheck1" name="testCheck1" data-div="testCheck1DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck2" name="testCheck2" data-div="testCheck2DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck3" name="testCheck3" data-div="testCheck3DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck4" name="testCheck4" data-div="testCheck3DIV" type="checkbox"><br>-->
+          <!--BASE CREATIVE TAGGING-->
+          <!--<div class="small-12 text-center columns auto2">-->
+          <!--  <h6>Creative Tagging - Lower 3rd Only</h6>-->
+          <!--</div>-->
+          <!--  <div class="row">-->
+          <!--    <div class="small-7 text-right columns">-->
+          <!--        <p class="labelhead">None</p>-->
+          <!--        <p class="labelhead">Phone</p>-->
+          <!--        <p class="labelhead">URL</p>-->
+          <!--        <p class="labelhead">Logo</p>-->
+          <!--    </div>-->
+          <!--    <fieldset class="large-5 columns">-->
+          <!--      <legend class="labelhead"></legend>-->
+                
+          <!--      <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">-->
+          <!--    </fieldset>-->
+          <!--  </div>-->
+            <!--BASE CREATIVE TAGGING END-->     
+
+ 
+
