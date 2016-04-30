@@ -7,10 +7,10 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" id="mainContainer">
   
     <div id="imgContainer" class="small-7 columns">
-      <h4>Endcard Sample</h4>
+      <h4>Endcard Sample <span id="baseCodeDIV"></span></h4>
       <div class="small-12 columns" style="" id="bgColorDiv">
 
         
@@ -33,6 +33,12 @@
         <div class="small-12 columns" id="baseURLDiv">
           <p></p>
         </div>
+        
+        <div class="small-12 columns" id="baseURLDiv">
+          <p></p>
+        </div>
+
+        
 <!-----------------END DYNAMIC CONTENT ---------------------------------------->       
       </div>
     </div>
@@ -48,10 +54,12 @@
               <p class="labelhead">VW Endcard Template</p> 
           </div>
           <div class="small-7 columns">
-              <input placeholder="please enter code: DW002" name="code" type="text">
+              <input placeholder="please enter code: DW002" name="baseCode" id="baseCode" data-div="baseCodeDIV" type="text">
           </div>
           <hr>
           <!--ENDCARD FIELD END-->
+<!--*******************************************************************************       -->
+
 <!--*******************************************************************************       -->          
           <!--TIMING FIELD-->
           <div class="small-5 columns">
@@ -61,14 +69,14 @@
          <div class="small-2 columns">
            <fieldset>
               <legend class="labelhead">:24/:06</legend>
-              <input value=":24/:06" id="timingbox1" name="timingbox1" type="checkbox">
+              <input value=":24/:06" id="timingbox1" name="timingbox1" type="checkbox" data-div="timingbox1DIV">
             </fieldset>
           </div>
           
            <div class="small-2 columns">
            <fieldset>
               <legend class="labelhead">:25/:05</legend>
-              <input value=":25/:05" id="timingbox2" name="timingbox2" type="checkbox">
+              <input value=":25/:05" id="timingbox2" name="timingbox2" type="checkbox" data-div="timingbox2DIV">
             </fieldset>
           </div>
     
@@ -81,27 +89,7 @@
           <hr>
           <!--TIMING FIELD END-->
 <!--*******************************************************************************       -->
-          <!--BASE CREATIVE TAGGING-->
-          <!--<div class="small-12 text-center columns auto2">-->
-          <!--  <h6>Creative Tagging - Lower 3rd Only</h6>-->
-          <!--</div>-->
-          <!--  <div class="row">-->
-          <!--    <div class="small-7 text-right columns">-->
-          <!--        <p class="labelhead">None</p>-->
-          <!--        <p class="labelhead">Phone</p>-->
-          <!--        <p class="labelhead">URL</p>-->
-          <!--        <p class="labelhead">Logo</p>-->
-          <!--    </div>-->
-          <!--    <fieldset class="large-5 columns">-->
-          <!--      <legend class="labelhead"></legend>-->
-                
-          <!--      <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>-->
-          <!--      <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>-->
-          <!--      <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>-->
-          <!--      <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">-->
-          <!--    </fieldset>-->
-          <!--  </div>-->
-            <!--BASE CREATIVE TAGGING END-->
+
 <!--*******************************************************************************       -->          
             <!--ENDCARD TAGGING-->
           <div class="small-12 text-center columns auto2">
@@ -126,20 +114,17 @@
                   <option value="https://res.cloudinary.com/djangoles/image/upload/v1462015964/saab_xsp4lz.png">Saab</option>
                   <option value="https://res.cloudinary.com/djangoles/image/upload/v1462018327/VW_ALPHA_zqbevy.png">Volkswagon</option>
                 </select>
-                <!--<input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="select">-->
                 <input name="baseOffer" id="baseOffer" type="text">
                 <input name="baseDealer" id="baseDealer" type="text">
                 <input id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="text">
                 <input id="baseLocation1" name="baseLocation1" data-div="baseLocation1Div" type="text">
                 <input id="baseURL" name="baseURL" data-div="baseURLDiv" type="text">
-<!--<input value="true" id="baseLogo" name="baseLogo" data-div="baseLogoDiv" type="checkbox">-->
-<!--<input class="nudge" value="true" id="baseOffer" name="baseOffer" data-div="baseOfferDiv" type="checkbox"><br>-->
-<!--<input class="nudge" value="true" id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="checkbox"><br>-->
-<!--<input class="nudge" value="true" id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="checkbox"><br>-->
-<!--<input id="baseDealer" name="baseDealer" data-div="baseDealerDiv" type="text">-->
               </fieldset>
             </div>
               <!--ENDCARD TAGGING END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       --> 
              <hr>
              
            <label>
@@ -157,6 +142,60 @@
 </script>
 
 <% include ./partials/footer %>
+
+
+
+
+
+
+
+
+<!-- ====================================================================== -->
+<!--CHECK BOX TEST SECTION -->
+<!-- ====================================================================== -->
+
+<!--<h1>CHECKBOX TEST SECTION</h1>-->
+<!--<div class="small-12 columns" id="testCheck1DIV">-->
+<!--    <p>TESTING</p>-->
+<!--</div>-->
+<!-- <div class="small-12 columns" id="testCheck2DIV">-->
+<!--    <p>TESTING2</p>-->
+<!--</div>-->
+
+<!--<div class="small-12 columns" id="testCheck3DIV">-->
+<!--    <p>TESTING3</p>-->
+<!--</div>-->
+
+<!--<div class="small-12 columns" id="testCheck4DIV">-->
+<!--    <p>TESTING4</p>-->
+<!--</div>-->
+
+   
+<!--<input value="true" id="testCheck1" name="testCheck1" data-div="testCheck1DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck2" name="testCheck2" data-div="testCheck2DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck3" name="testCheck3" data-div="testCheck3DIV" type="checkbox"><br>-->
+<!--<input value="true" id="testCheck4" name="testCheck4" data-div="testCheck3DIV" type="checkbox"><br>-->
+          <!--BASE CREATIVE TAGGING-->
+          <!--<div class="small-12 text-center columns auto2">-->
+          <!--  <h6>Creative Tagging - Lower 3rd Only</h6>-->
+          <!--</div>-->
+          <!--  <div class="row">-->
+          <!--    <div class="small-7 text-right columns">-->
+          <!--        <p class="labelhead">None</p>-->
+          <!--        <p class="labelhead">Phone</p>-->
+          <!--        <p class="labelhead">URL</p>-->
+          <!--        <p class="labelhead">Logo</p>-->
+          <!--    </div>-->
+          <!--    <fieldset class="large-5 columns">-->
+          <!--      <legend class="labelhead"></legend>-->
+                
+          <!--      <input value="true" id="lower3rdnull" name="lower3rdnull" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdPhone" name="lower3rdPhone" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdURL" name="lower3rdURL" type="checkbox"><br>-->
+          <!--      <input value="true" id="lower3rdLogo" name="lower3rdLogo" type="checkbox">-->
+          <!--    </fieldset>-->
+          <!--  </div>-->
+            <!--BASE CREATIVE TAGGING END-->     
 
  
 

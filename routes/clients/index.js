@@ -1,12 +1,10 @@
-
 var express = require('express');
 var router = express.Router();
-var passport = require('passport');
 var Order = require('../../models/order');
+//var passport = require('passport');
 //var User = require('../models/user');
 
 
-//REDIRECT TO /clubs------------------------------------------------------------
 
 
 router.get('/', function(req, res) {
@@ -17,10 +15,10 @@ router.get('/', function(req, res) {
 router.post('/order', function(req, res) {
     var inputDefault = "false";
     var colorDefault = "#FFFFFF";
-    var code = req.body.code ? req.body.code : inputDefault;
+    var baseCode = req.body.baseCode ? req.body.baseCode : inputDefault;
     var timingbox1 = req.body.timingbox1 ? req.body.timingbox1 : inputDefault;
     var timingbox2 = req.body.timingbox2 ? req.body.timingbox2 : inputDefault;
-    var cust_timing = req.body.cust_timing ? req.body.cust_timing : inputDefault;;
+    var cust_timing = req.body.cust_timing ? req.body.cust_timing : inputDefault;
     var bgColor = req.body.bgColor ? req.body.bgColor : colorDefault;
     var baseLogo = req.body.baseLogo ? req.body.baseLogo : inputDefault;
     var baseOffer = req.body.baseOffer ? req.body.baseOffer : inputDefault;
@@ -32,14 +30,9 @@ router.post('/order', function(req, res) {
     var timestamp = Date();
     var approved = 0;
 
-// var lower3rdnull = req.body.lower3rdnull ? req.body.lower3rdnull : inputDefault;
-// var lower3rdPhone = req.body.lower3rdPhone ? req.body.lower3rdPhone : inputDefault;
-// var lower3rdURL = req.body.lower3rdURL ? req.body.lower3rdURL : inputDefault;
-// var lower3rdLogo = req.body.lower3rdLogo ? req.body.lower3rdLogo : inputDefault;
-// var baseAddress2 = req.body.baseAddress2 ? req.body.baseAddress2 : inputDefault;
 
     var orderInvoice = {
-        code: code,
+        baseCode: baseCode,
         timingbox1: timingbox1,
         timingbox2: timingbox2,
         cust_timing: cust_timing,
@@ -53,14 +46,7 @@ router.post('/order', function(req, res) {
         notes: notes,
         approved: approved,
         timestamp: timestamp
-        
-// baseAddress2: baseAddress2,
-// lower3rdnull: lower3rdnull,
-// lower3rdPhone: lower3rdPhone,
-// lower3rdURL: lower3rdURL,
-// lower3rdLogo: lower3rdLogo,
-
-    }
+};
     
  Order.create(orderInvoice, function(err, orderInvoice) {
       if(err) {
@@ -72,11 +58,25 @@ router.post('/order', function(req, res) {
     }); 
 });
 
+router.get('/order/:id/edit', function(req, res) {
+ Order.findById(req.params.id, function(err, foundOrder) {
+     if(err) {
+         throw err;
+     }
+     console.log(req.params.id);
+        // if(err) {
+        //     throw err;
+        // }
+        res.render("edit");    
+ });    
+});
 
 
 
 router.post('/order/confirm', function(req, res) {
-    res.render('confirm')
+    // console.log("We Are Here");
+    // console.log(req.orderInvoice.baseCode);
+    res.render('confirm');
     // var inputDefault = "false";
     // var code = req.body.code ? req.body.code : inputDefault;;
     // var checkbox1 = req.body.checkbox1 ? req.body.checkbox1 : inputDefault;

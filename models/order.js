@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 
 var orderSchema = new mongoose.Schema({
-    code: String,
+    baseCode: String,
     timingbox1: String,
     timingbox2: String,
     cust_timing: String,

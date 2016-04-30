@@ -1,9 +1,9 @@
 <% include ./partials/header %>
 <div class="row">
-<div class="small-12 text-center columns">
-  <h1>Confirm Order</h1>
+<div id="confirmHeader" class="small-12 text-center columns">
+  <h1>Submitted Order</h1>
 </div>
-
+<form action="/order/<%=orderInvoice._id %>/edit" method="GET">
 <table>
   <thead>
     <tr>
@@ -19,11 +19,12 @@
       <th>Location</th>
       <th>URL</th>
       <th>Notes</th>
+      <th>Edit</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><%= orderInvoice.code %></td>
+      <td><%= orderInvoice.baseCode %></td>
       <td><%= orderInvoice.timingbox1 %></td>
       <td><%= orderInvoice.timingbox2 %></td>
       <td><%= orderInvoice.cust_timing %></td>
@@ -35,17 +36,12 @@
       <td><%= orderInvoice.baseLocation1 %></td>
       <td><%= orderInvoice.baseURL %></td>
       <td><%= orderInvoice.notes %></td>
+      <td> <button class="button">EDIT</button></td>
     </tr>
   </tbody>
 </table>
 
 
-
-<form action="/order/confirm" method="POST">
-    <ul>
-
-    </ul>
- <button class="button">Confirm</button>
 </form>
 
 

@@ -7,11 +7,33 @@ td img {
     width: 50px;
 }
 
+#topnav {
+ 
+    height: 50px;
+    background: black;
+}
+#topnav h1 {
+    color:white;
+    font-size: 1em;
+    padding-top: 14px;
+    text-align: left;
+    margin-left: 20px;
+}
+
 #mainTop {
     background:#2199e8;
     margin-top: 30px;
     margin-bottom: 20px;
     color: white;
+}
+
+#mainContainer {
+    background:#fafafa;
+    padding: 30px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    box-shadow: 2px 2px 100px #DDD;
+    
 }
 
 /*FORM FIELD HEADERS*/
@@ -48,7 +70,7 @@ p.labelhead {
 
 /*DYNAMIC DIVS*/
 #imgContainer {
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -82,6 +104,12 @@ p.labelhead {
     opacity: 1;
     color:white;
     font-family: Oswald;  
+}
+
+#baseCodeDIV {
+    opacity: 1;
+    color:black;
+    font-family: Oswald; 
 }
 
 #baseLogoDiv img {
@@ -167,12 +195,23 @@ input[type="checkbox"] {
     font-weight: bold;
     font-size: 1.9em;
     text-align: center;
-   
-    
 }
 
 
+/*ORDER PAGE*/
+#confirmHeader {
+    margin-top: 30px;
+}
 
+
+/*CHECKBOX TESTS*/
+
+#testCheck1DIV,
+#testCheck2DIV,
+#testCheck3DIV,
+#testCheck4DIV {
+    opacity: 0;
+}
 
 
 

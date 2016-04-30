@@ -12,66 +12,43 @@ function _(inputField) {
 //===================INPUT FIELDS FUNCTIONS=====================================
 //------------------------------------------------------------------------------
 
-function toggleDiv(checkbox, divId) {
+function toggleDiv(checkbox, divID) {
     // Grabbing ID OF DIV TO HIDE OR SHOW
-    var divId = document.getElementById(divId);
+    var divID = document.getElementById(divID);
     if (checkbox.checked) {
-        divId.style.opacity = '1';
+        divID.style.opacity = '1';
     } else {
-        divId.style.opacity = '0';
+        divID.style.opacity = '0';
     }
 }
 
-function fillDiv(inputbox, divId) {
+function fillDiv(inputbox, divID) {
     // Grabbing ID OF DIV TO Fill WITH TEXT
-    var divId = document.getElementById(divId);
-    divId.style.display = "block";
-    divId.innerHTML = inputbox.value;
+    var divID = document.getElementById(divID);
+    divID.style.display = "block";
+    divID.innerHTML = inputbox.value;
 }
 
-function fillLogoDiv(selectBox, divId) {
+function fillLogoDiv(selectBox, divID) {
     // GRABBING ID OF DIV TO FILL WITH IMAGE
-    var divId = document.getElementById(divId);
-    divId.style.display = "block";
-    divId.innerHTML = "<img src="+"\""+selectBox.value + "\">" ;
+    var divID = document.getElementById(divID);
+    divID.style.display = "block";
+    divID.innerHTML = "<img src="+"\""+selectBox.value + "\">" ;
 }
 
-function fillBgColor(colorpick, divId, dummyContent) {
+function fillBgColor(colorpick, divID) {
     // GRABBING ID OF DIV TO FILL WITH BG COLOR
-  var divId = document.getElementById(divId);
-  divId.style.background = colorpick.value;
+  var divID = document.getElementById(divID);
+  divID.style.background = colorpick.value;
   console.log(colorpick.value);
 }
-
-
-//------------------------------------------------------------------------------
-//========================TOGGLE CHECK BOXES====================================
-//------------------------------------------------------------------------------
-
-// WORKS BUT WOULD LIKE TO REFACTOR!!!!!!!!
-
-// _('baseURL').onclick = function() {
-//     toggleDiv(this, "baseURLDiv");
-// };
-
-// _('baseLogo').onclick = function() {
-//     toggleDiv(this, "baseLogoDiv");
-// };
-
-// _('baseDealer').onclick = function() {
-//     toggleDiv(this, "baseDealerDiv"); 
-// };
-
-// _('baseAddress1').onclick = function() {
-//     toggleDiv(this, "baseAddress1Div"); 
-// };
 
 //------------------------------------------------------------------------------
 //========================CHANGE BACKGROUND COLOR===============================
 //------------------------------------------------------------------------------
 
 _('bgColor').onchange = function() {
-    fillBgColor(this, 'bgColorDiv','dummyContent');
+    fillBgColor(this, 'bgColorDiv');
 };
 
 
@@ -86,6 +63,8 @@ _('baseLogo').onchange = function() {
 //------------------------------------------------------------------------------
 //========================INPUT TEXT UPDATE DIV=================================
 //------------------------------------------------------------------------------
+
+
 _('baseOffer').onkeyup = function() {
     console.log(this.value);
     fillDiv(this, 'baseOfferDiv'); 
@@ -111,26 +90,56 @@ _('baseURL').onkeyup = function() {
     fillDiv(this, 'baseURLDiv'); 
 };
 
-
-
-
-
-
-
-
+_('baseCode').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseCodeDIV'); 
+};
 
 
 //------------------------------------------------------------------------------
 //========================TESTING AREA==========================================
 //------------------------------------------------------------------------------
 
-//  var checks = document.querySelectorAll('input[type="checkbox"]');
-  
-//  for(var i = 0; i < checks.length; i++) {
-//     var checkID = checks[i].id
-//     var datadiv = checks[i].dataset.div;
-//     console.log(datadiv, checkID);
+
+
+//------------------------------------------------------------------------------
+//========================TOGGLE CHECK BOXES====================================
+//------------------------------------------------------------------------------
+
+// WORKS BUT WOULD LIKE TO REFACTOR!!!!!!!!
+
+// _('testCheck1').onclick = function() {
+//     fillCheckedDivs(this, "testCheck1DIV");
+// };
+
+// _('testCheck2').onclick = function() {
+//     fillCheckedDivs(this, "testCheck1DIV");
+// };
+
+// _('testCheck3').onclick = function() {
+//     fillCheckedDivs(this, "testCheck3DIV");
+// };
+
+// _('testCheck4').onclick = function() {
+//     fillCheckedDivs(this, "testCheck4DIV");
+// };
+
+
+// function fillCheckedDivs(checkboxID, divID) {
+//  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+//  for(var i = 0; i < checkboxes.length; i++) {
+//     var checkID = checkboxes[i].id
+//     var datadiv = checkboxes[i].dataset.div;
+//     console.log(datadiv, divID, checkID);
+    
+    // if (checkboxes.checked) {
+    //     divID.style.opacity = '1';
+    // } else {
+    //     divID.style.opacity = '0';
+    //     }
+//     }    
 // }
+
 
 // clickedCheckBox(checkID).onclick = function() {
 // toggleDiv(this, datadiv);
