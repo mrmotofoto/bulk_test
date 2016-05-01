@@ -1,1 +1,176 @@
-<h1>THIS iS THE SHOW PAGE</h1>
+<% include ./partials/header %>
+
+<div class="row">
+    <div id="mainTop" class="small-12 text-center columns">
+      <h1>View Order</h1>
+    </div>
+</div>
+
+<div class="row" id="mainContainer">
+  
+<div class="small-5 columns" id="formContainer">
+    
+      <h5><strong>Order Summary</strong></h5>
+      <ul>
+          <li><strong>Template:</strong></li>
+          <li><%=foundOrder.baseCode%></li>
+          <li><strong>Offer:</strong></li>
+          <li><%=foundOrder.baseOffer%></li>
+          <li><strong>Dealer:</strong></li>
+          <li><%=foundOrder.baseDealer%></li>
+          <li><strong>Address:</strong></li>
+          <li><%=foundOrder.baseAddress1%></li>
+          <li><strong>Location:</strong></li>
+          <li><%=foundOrder.baseLocation1%></li>
+          <li><strong>URL:</strong></li>
+          <li><%=foundOrder.baseURL%></li>
+          <li><strong>Notes:</strong></li>
+          <li><%=foundOrder.notes%></li>
+      </ul>
+
+    <form action="/orders/<%= foundOrder._id %>?_method=DELETE" method="POST">
+        <a class="button success" href="/orders">BACK</a> 
+        <button class="button alert">DELETE</button>
+    </form>
+</div> 
+        
+    <div id="imgContainer" class="small-7 columns">
+      <h4>Endcard Sample <span id="baseCodeDIV"></span></h4>
+      <div class="small-12 columns" style="background:<%= foundOrder.bgColor %>" id="bgColorDiv">
+
+<!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
+        <div class="small-12 columns" id="baseLogoDiv">
+          <img src="<%= foundOrder.baseLogo%>">
+        </div>
+        <div class="small-12 columns" id="baseOfferDiv">
+          <p><%= foundOrder.baseOffer%></p>
+        </div>
+        <div class="small-12 columns" id="baseDealerDiv">
+          <p><%= foundOrder.baseDealer%></p>
+        </div>
+        <div class="small-12 columns" id="baseAddress1Div">
+          <p><%= foundOrder.baseAddress1%></p>
+        </div>
+        <div class="small-12 columns" id="baseLocation1Div">
+          <p><%= foundOrder.baseLocation1%></p>
+        </div>
+        <div class="small-12 columns" id="baseURLDiv">
+          <p style="margin-top: -20px"><%= foundOrder.baseURL%></p>
+        </div>
+        
+<!-----------------END DYNAMIC CONTENT ---------------------------------------->       
+      </div>
+    </div>
+</div><!--row END-->
+<br>
+<br>
+<br>
+<br>
+<script>
+
+//------------------------------------------------------------------------------
+//===================HELPER FUNCTIONS===========================================
+//------------------------------------------------------------------------------
+
+
+function _(inputField) {
+  return document.getElementById(inputField);
+}
+
+
+//------------------------------------------------------------------------------
+//===================INPUT FIELDS FUNCTIONS=====================================
+//------------------------------------------------------------------------------
+
+function toggleDiv(checkbox, divID) {
+    // Grabbing ID OF DIV TO HIDE OR SHOW
+    var divID = document.getElementById(divID);
+    if (checkbox.checked) {
+        divID.style.opacity = '1';
+    } else {
+        divID.style.opacity = '0';
+    }
+}
+
+function fillDiv(inputbox, divID) {
+    // Grabbing ID OF DIV TO Fill WITH TEXT
+    var divID = document.getElementById(divID);
+    divID.style.display = "block";
+    divID.innerHTML = inputbox.value;
+}
+
+function fillLogoDiv(selectBox, divID) {
+    // GRABBING ID OF DIV TO FILL WITH IMAGE
+    var divID = document.getElementById(divID);
+    divID.style.display = "block";
+    divID.innerHTML = "<img src="+"\""+selectBox.value + "\">" ;
+}
+
+function fillBgColor(colorpick, divID) {
+    // GRABBING ID OF DIV TO FILL WITH BG COLOR
+  var divID = document.getElementById(divID);
+  divID.style.background = colorpick.value;
+  console.log(colorpick.value);
+}
+
+//------------------------------------------------------------------------------
+//========================CHANGE BACKGROUND COLOR===============================
+//------------------------------------------------------------------------------
+
+_('bgColor').onchange = function() {
+    fillBgColor(this, 'bgColorDiv');
+};
+
+
+//------------------------------------------------------------------------------
+//========================CHANGE LOGO IMAGE=====================================
+//------------------------------------------------------------------------------
+
+_('baseLogo').onchange = function() {
+    fillLogoDiv(this, 'baseLogoDiv');
+};
+
+//------------------------------------------------------------------------------
+//========================INPUT TEXT UPDATE DIV=================================
+//------------------------------------------------------------------------------
+
+
+_('baseOffer').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseOfferDiv'); 
+};
+
+_('baseDealer').onkeyup = function() {
+     console.log(this.value);
+     fillDiv(this, 'baseDealerDiv'); 
+};
+
+_('baseAddress1').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseAddress1Div'); 
+};
+
+_('baseLocation1').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseLocation1Div'); 
+};
+
+_('baseURL').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseURLDiv'); 
+};
+
+// _('baseCode').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseCodeDIV'); 
+// };
+
+
+</script>
+
+<% include ./partials/footer %>
+
+ 
+
+ 
+

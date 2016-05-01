@@ -5,33 +5,24 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
 var Order = require('./models/order');
+mongoose.connect('mongodb://localhost/bulk_upload_test');
+var methodOverride = require('method-override');
 
-// var Club = require('./models/club');
-// var Comment = require('./models/comment');
 // var User = require('./models/user');
 //var seedDB = require('./seeds');
 //var methodOverride = require('method-override');
 
 
 //REQUIRING Routes--------------------------------------------
-// var commentRoutes = require('./routes/*');
-// var clubRoutes = require('./routes/*');
 
-var autoRoutes = require('./routes/auto');
-mongoose.connect('mongodb://localhost/bulk_upload_test');
+var orderRoutes = require('./routes/orders');
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
-//app.use(methodOverride("_method"))
-
-
-
-
-
-app.use(autoRoutes);
-//app.use("/clubs/:id/comments",commentRoutes);
-//app.use("/clubs", clubRoutes);
+app.use(methodOverride("_method"));
+app.use(orderRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){

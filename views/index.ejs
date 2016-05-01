@@ -3,7 +3,7 @@
 <div id="confirmHeader" class="small-12 text-center columns">
   <h1>All Orders</h1>
 </div>
-<a href="/orders/new"><button class="button">ADD NEW</button></a>
+<a href="/orders/new"><button class="button success">ADD NEW</button></a>
 <table>
   <thead>
     <tr>
@@ -40,7 +40,7 @@
       <td><%= order.baseURL %></td>
       <td><%= order.notes %></td>
       <td><a href="/orders/<%= order._id %>"><button class="button">VIEW</button></a></td>
-      <td><a href="/orders/<%= order._id %>/edit"><button class="button">EDIT</button></a></td>
+      <td><a href="/orders/<%= order._id %>/edit"><button class="button alert">EDIT</button></a></td>
     </tr>  
    
    <% }) %>

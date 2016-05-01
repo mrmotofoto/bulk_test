@@ -90,10 +90,10 @@ _('baseURL').onkeyup = function() {
     fillDiv(this, 'baseURLDiv'); 
 };
 
-_('baseCode').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseCodeDIV'); 
-};
+// _('baseCode').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseCodeDIV'); 
+// };
 
 
 //------------------------------------------------------------------------------

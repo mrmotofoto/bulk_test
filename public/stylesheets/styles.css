@@ -130,8 +130,7 @@ p.labelhead {
     height: 25px;
     text-align: center;
     font-size: 1.2em;
-    margin-top: 80px;
-/*color:black;*/
+    margin-top: 55px;
 }
 
 
@@ -154,13 +153,13 @@ font-size: 1.5em;
 
 
 /*INPUT FIELDS*/
-input[name="cust_timing"],
-input[name="baseOffer"],
-input[name="baseDealer"],
-input[name="baseAddress1"],
-input[name="baseLocation1"],
-input[name="baseURL"],
-input[name="baseLogo"],
+input[id="cust_timing"],
+input[id="baseOffer"],
+input[id="baseDealer"],
+input[id="baseAddress1"],
+input[id="baseLocation1"],
+input[id="baseURL"],
+input[id="baseLogo"],
 select {
     height: 30px;
 }
@@ -213,7 +212,15 @@ input[type="checkbox"] {
     opacity: 0;
 }
 
+/*SHOW PAGE*/
+#showBG {
+    height: 450px;
+}
 
+#showImg img {
+    width: 15%;
+    margin-top: 20px;
+}
 
 
 

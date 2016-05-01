@@ -3,7 +3,7 @@
 
 <div class="row">
     <div id="mainTop" class="small-12 text-center columns">
-      <h1>Bulk Upload</h1>
+      <h1>Spot Order</h1>
     </div>
 </div>
 
@@ -131,11 +131,15 @@
               Notes
               <textarea rows="7" class="labelhead" name="notes"></textarea>
             </label>
-              <button class="button">Submit</button>
-          </form>    
+              <button class="button">SUBMIT</button>
+          </form>
+          <a href="/orders" class="button alert">CANCEL</a>
         </div> 
 </div><!--row END-->
-
+<br>
+<br>
+<br>
+<br>
 <script>
 //------------------------------------------------------------------------------
 //===================HELPER FUNCTIONS===========================================
@@ -229,10 +233,10 @@ _('baseURL').onkeyup = function() {
     fillDiv(this, 'baseURLDiv'); 
 };
 
-_('baseCode').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseCodeDIV'); 
-};
+// _('baseCode').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseCodeDIV'); 
+// };
 
 
 //------------------------------------------------------------------------------
