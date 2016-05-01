@@ -2,15 +2,16 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var passport = require('passport');
-var LocalStrategy = require('passport-local');
+//var passport = require('passport');
+//var LocalStrategy = require('passport-local');
 var Order = require('./models/order');
-mongoose.connect('mongodb://localhost/bulk_upload_test');
 var methodOverride = require('method-override');
 
 // var User = require('./models/user');
 //var seedDB = require('./seeds');
 //var methodOverride = require('method-override');
+
+mongoose.connect('mongodb://localhost/bulk_upload_test');
 
 
 //REQUIRING Routes--------------------------------------------
