@@ -11,7 +11,9 @@ var methodOverride = require('method-override');
 //var seedDB = require('./seeds');
 //var methodOverride = require('method-override');
 
-mongoose.connect('mongodb://localhost/bulk_upload_test');
+
+//mongoose.connect('mongodb://localhost/bulk_upload_test');
+mongoose.connect('mongodb://rjs:harry113@ds029595.mlab.com:29595/bulk_upload');
 
 
 //REQUIRING Routes--------------------------------------------
