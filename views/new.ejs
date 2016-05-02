@@ -13,7 +13,6 @@
       <h4>Endcard Sample <span id="baseCodeDIV"></span></h4>
       <div class="small-12 columns" style="" id="bgColorDiv">
 
-        
 <!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
         <div class="small-12 columns" id="baseLogoDiv">
           <img src="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">
@@ -37,11 +36,46 @@
         <div class="small-12 columns" id="baseURLDiv">
           <p></p>
         </div>
-
-        
-<!-----------------END DYNAMIC CONTENT ---------------------------------------->       
       </div>
+      
+  <form action="/orders" method="POST">
+<!-- ----------EXTRA DEALER ADDONS----------------------------------------- -->
+
+<div id="addtionalDealersForm" class="small-12 columns">
+  <h2 class="text-center">Additional Dealers</h2>
+  
+
+        <div class="small-4 columns">
+               <label>Dealer 2</label>
+               <input id="baseDealer2" name="baseDealer2"  type="text">
+               <label>Address</label>
+                <input id="baseAddress2" name="baseAddress2" data-div="baseAddress1Div" type="text">
+                <label>City</label>
+                <input id="baseLocation2" name="baseLocation2" data-div="baseLocation1Div" type="text">
+        </div>
+
+        <div class="small-4 columns">
+                <label>Dealer 3</label>
+               <input id="baseDealer3" name="baseDealer3"  type="text">
+               <label>Address</label>
+                <input id="baseAddress3" name="baseAddress3" data-div="baseAddress1Div" type="text">
+                <label>City</label>
+                <input id="baseLocation3" name="baseLocation3" data-div="baseLocation1Div" type="text">
+        </div>
+        
+        <div class="small-4 columns">
+                <label>Dealer 4</label>
+               <input id="baseDealer4" name="baseDealer4"  type="text">
+               <label>Address</label>
+                <input id="baseAddress4" name="baseAddress4" data-div="baseAddress1Div" type="text">
+                <label>City</label>
+                <input id="baseLocation4" name="baseLocation4" data-div="baseLocation1Div" type="text">
+        </div>
     </div>
+  </div>  
+  
+<!-----------------END DYNAMIC CONTENT ---------------------------------------->       
+
       <div class="small-5 columns" id="formContainer"><!--RIGHT SIDE FORM START-->
           <h4>Endcard CheckList</h4>
           <div class="small-12 text-center columns auto">
@@ -50,7 +84,7 @@
           </div>
           <!--ENDCARD FIELD-->
           <div class="small-5 columns">
-            <form action="/orders" method="POST">
+          
               <p class="labelhead">VW Endcard Template</p> 
           </div>
           <div class="small-7 columns">
@@ -104,10 +138,11 @@
                   <p style="margin-bottom:24px;" class="labelhead">Address</p>
                   <p style="margin-bottom:24px;" class="labelhead">Location</p>
                   <p class="labelhead">URL</p>
+                  <p class="labelhead">Additional Dealers</p>
               </div>
               <fieldset class="large-5 columns">
                 <legend class="labelhead"></legend>
-                <input type="color" name="bgColor" id="bgColor" value="#2199e8">
+                <input type="color" name="bgColor" id="bgColor" value="n/a">
                 <select id="baseLogo" name="baseLogo" data-div="baseLogoDiv">
                   <option value="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">Select Logo</option>
                   <option value="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">Volvo</option>
@@ -119,6 +154,7 @@
                 <input id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="text">
                 <input id="baseLocation1" name="baseLocation1" data-div="baseLocation1Div" type="text">
                 <input id="baseURL" name="baseURL" data-div="baseURLDiv" type="text">
+                <input value="" id="addtionalDealers" name="addtionalDealers" type="checkbox" data-div="addtionalDealers">
               </fieldset>
             </div>
               <!--ENDCARD TAGGING END-->
@@ -129,7 +165,7 @@
              
            <label>
               Notes
-              <textarea rows="7" class="labelhead" name="notes"></textarea>
+              <textarea rows="4" class="labelhead" name="notes"></textarea>
             </label>
               <button class="button">SUBMIT</button>
           </form>
@@ -146,92 +182,99 @@
 //------------------------------------------------------------------------------
 
 
-function _(inputField) {
-  return document.getElementById(inputField);
-}
+// function _(inputField) {
+//   return document.getElementById(inputField);
+// }
 
 
 //------------------------------------------------------------------------------
 //===================INPUT FIELDS FUNCTIONS=====================================
 //------------------------------------------------------------------------------
 
-function toggleDiv(checkbox, divID) {
-    // Grabbing ID OF DIV TO HIDE OR SHOW
-    var divID = document.getElementById(divID);
-    if (checkbox.checked) {
-        divID.style.opacity = '1';
-    } else {
-        divID.style.opacity = '0';
-    }
-}
+// function toggleDiv(checkbox, divID) {
+//     // Grabbing ID OF DIV TO HIDE OR SHOW
+//     var divID = document.getElementById(divID);
+//     if (checkbox.checked) {
+//         divID.style.opacity = '1';
+//     } else {
+//         divID.style.opacity = '0';
+//     }
+// }
 
-function fillDiv(inputbox, divID) {
-    // Grabbing ID OF DIV TO Fill WITH TEXT
-    var divID = document.getElementById(divID);
-    divID.style.display = "block";
-    divID.innerHTML = inputbox.value;
-}
+// function fillDiv(inputbox, divID) {
+//     // Grabbing ID OF DIV TO Fill WITH TEXT
+//     var divID = document.getElementById(divID);
+//     divID.style.display = "block";
+//     divID.innerHTML = inputbox.value;
+// }
 
-function fillLogoDiv(selectBox, divID) {
-    // GRABBING ID OF DIV TO FILL WITH IMAGE
-    var divID = document.getElementById(divID);
-    divID.style.display = "block";
-    divID.innerHTML = "<img src="+"\""+selectBox.value + "\">" ;
-}
+// function fillLogoDiv(selectBox, divID) {
+//     // GRABBING ID OF DIV TO FILL WITH IMAGE
+//     var divID = document.getElementById(divID);
+//     divID.style.display = "block";
+//     divID.innerHTML = "<img src="+"\""+selectBox.value + "\">" ;
+// }
 
-function fillBgColor(colorpick, divID) {
-    // GRABBING ID OF DIV TO FILL WITH BG COLOR
-  var divID = document.getElementById(divID);
-  divID.style.background = colorpick.value;
-  console.log(colorpick.value);
-}
+// function fillBgColor(colorpick, divID) {
+//     // GRABBING ID OF DIV TO FILL WITH BG COLOR
+//   var divID = document.getElementById(divID);
+//   divID.style.background = colorpick.value;
+//   console.log(colorpick.value);
+// }
 
 //------------------------------------------------------------------------------
 //========================CHANGE BACKGROUND COLOR===============================
 //------------------------------------------------------------------------------
 
-_('bgColor').onchange = function() {
-    fillBgColor(this, 'bgColorDiv');
-};
+// _('bgColor').onchange = function() {
+//     fillBgColor(this, 'bgColorDiv');
+// };
 
 
 //------------------------------------------------------------------------------
 //========================CHANGE LOGO IMAGE=====================================
 //------------------------------------------------------------------------------
 
-_('baseLogo').onchange = function() {
-    fillLogoDiv(this, 'baseLogoDiv');
-};
+// _('baseLogo').onchange = function() {
+//     fillLogoDiv(this, 'baseLogoDiv');
+// };
 
 //------------------------------------------------------------------------------
 //========================INPUT TEXT UPDATE DIV=================================
 //------------------------------------------------------------------------------
 
 
-_('baseOffer').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseOfferDiv'); 
-};
+// _('baseOffer').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseOfferDiv'); 
+// };
 
-_('baseDealer').onkeyup = function() {
-     console.log(this.value);
-     fillDiv(this, 'baseDealerDiv'); 
-};
+// _('baseDealer').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseDealerDiv'); 
+// };
 
-_('baseAddress1').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseAddress1Div'); 
-};
+// _('baseAddress1').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseAddress1Div'); 
+// };
 
-_('baseLocation1').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseLocation1Div'); 
-};
+// _('baseLocation1').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseLocation1Div'); 
+// };
 
-_('baseURL').onkeyup = function() {
-    console.log(this.value);
-    fillDiv(this, 'baseURLDiv'); 
-};
+// _('baseURL').onkeyup = function() {
+//     console.log(this.value);
+//     fillDiv(this, 'baseURLDiv'); 
+// };
+
+
+// _('addtionalDealers').onchange = function() {
+//   console.log(this.value);
+//   toggleDiv(this, 'addtionalDealersForm');
+  
+// }
 
 // _('baseCode').onkeyup = function() {
 //     console.log(this.value);

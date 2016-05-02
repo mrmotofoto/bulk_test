@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //===================HELPER FUNCTIONS===========================================
 //------------------------------------------------------------------------------
-
+console.log('main.js');
 
 function _(inputField) {
   return document.getElementById(inputField);
@@ -89,6 +89,13 @@ _('baseURL').onkeyup = function() {
     console.log(this.value);
     fillDiv(this, 'baseURLDiv'); 
 };
+
+
+_('addtionalDealers').onchange = function() {
+  console.log(this.value);
+  toggleDiv(this, 'addtionalDealersForm');
+  
+}
 
 // _('baseCode').onkeyup = function() {
 //     console.log(this.value);

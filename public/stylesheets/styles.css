@@ -223,4 +223,12 @@ input[type="checkbox"] {
 }
 
 
+/*ADDTIONAL DEALERS FORM*/
+
+#addtionalDealersForm {
+    /*display: none;*/
+    opacity: 0;
+}
+
+
 

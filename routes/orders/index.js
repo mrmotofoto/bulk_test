@@ -40,8 +40,8 @@ router.get('/orders/:id', function(req, res) {
 
 //CREATE NEW ORDER--------------------------------
 router.post('/orders', function(req, res) {
-    var inputDefault = "false";
-    var colorDefault = "#FFFFFF";
+    var inputDefault = "n/a";
+    var colorDefault = "None";
     var baseCode = req.body.baseCode ? req.body.baseCode : inputDefault;
     var timingbox1 = req.body.timingbox1 ? req.body.timingbox1 : inputDefault;
     var timingbox2 = req.body.timingbox2 ? req.body.timingbox2 : inputDefault;
@@ -52,6 +52,9 @@ router.post('/orders', function(req, res) {
     var baseDealer = req.body.baseDealer ? req.body.baseDealer : inputDefault;
     var baseAddress1 = req.body.baseAddress1 ? req.body.baseAddress1 : inputDefault;
     var baseLocation1 = req.body.baseLocation1 ? req.body.baseLocation1 : inputDefault;
+    var baseDealer2 = req.body.baseDealer2 ? req.body.baseDealer2 : inputDefault;
+    var baseAddress2 = req.body.baseAddress2 ? req.body.baseAddress2 : inputDefault;
+    var baseLocation2 = req.body.baseLocation2 ? req.body.baseLocation2 : inputDefault;
     var baseURL = req.body.baseURL ? req.body.baseURL : inputDefault;
     var notes = req.body.notes ? req.body.notes : inputDefault;
     var timestamp = Date();
@@ -68,6 +71,9 @@ router.post('/orders', function(req, res) {
         baseDealer: baseDealer,
         baseAddress1: baseAddress1,
         baseLocation1: baseLocation1,
+        baseDealer2: baseDealer2,
+        baseAddress2: baseAddress2,
+        baseLocation2: baseLocation2,
         baseURL: baseURL,
         notes: notes,
         approved: approved,
