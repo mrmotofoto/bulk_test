@@ -12,8 +12,8 @@ var orderRoutes = require('./routes/orders');
 //var methodOverride = require('method-override');
 
 
-//mongoose.connect('mongodb://localhost/bulk_upload_test');
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect('mongodb://localhost/bulk_upload_test');
+//mongoose.connect(process.env.DATABASEURL);
 
 
 

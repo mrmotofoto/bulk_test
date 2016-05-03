@@ -1,0 +1,190 @@
+
+<% include ./partials/header %>
+
+<!--TITILE HEAD-->
+<div class="row">
+    <div id="mainTop" class="small-12 text-center columns">
+      <h1>Spot Order</h1>
+    </div>
+</div>
+<!--TITILE HEAD END-->
+<div class="row" id="mainContainer">
+  
+  <form action="/orders" method="POST">
+
+      <div class="small-5 columns" id="formContainer"><!--LEFT SIDE FORM CONTAINER-->
+          <h4>Endcard CheckList</h4>
+          <div class="small-12 text-center columns auto">
+            <h4>Automotive - 2 Dealer</h4>
+          </div>
+          <!--ENDCARD FIELD FORM FIELD START-->
+          <div class="small-5 columns">
+              <p class="labelhead">VW Endcard Template</p> 
+          </div>
+
+         <div class="small-12 columns">
+            <a class="button" href=''>One Dealer</a>
+            <a class="button" href="/orders/twodealer">Two Dealer</a>
+            <a class="button" href="/orders/threedealer">Three Dealer</a>
+            <a class="button" href="/orders/fourdealer">Four Dealer</a>
+          </div>
+          <hr>
+          <!--ENDCARD FIELD END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       -->          
+          <!--TIMING FIELD START-->
+        <div class="small-5 columns">
+            <p class="labelhead">Timing Configuration</p> 
+        </div>
+          
+        <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:24/:06</legend>
+              <input value=":24/:06" id="timingbox1" name="timingbox1" type="checkbox" data-div="timingbox1DIV">
+            </fieldset>
+        </div>
+          
+        <div class="small-2 columns">
+           <fieldset>
+              <legend class="labelhead">:25/:05</legend>
+              <input value=":25/:05" id="timingbox2" name="timingbox2" type="checkbox" data-div="timingbox2DIV">
+            </fieldset>
+        </div>
+    
+        <div class="small-3 columns">
+            <fieldset>
+              <legend class="labelhead">Custom</legend>
+              <input name="cust_timing" type="text">
+            </fieldset>
+        </div>
+        <hr>
+          <!--TIMING FIELD END-->
+<!--*******************************************************************************       -->
+
+<!--*******************************************************************************       -->          
+            <!--ENDCARD TAGGING START-->
+          <div class="small-12 text-center columns auto2">
+            <h6>Base End Tagging (Select All Fields That Apply)</h6>
+          </div>
+          
+            <div class="row">
+              <div class="small-7 text-right columns">
+                  <p style="margin-top:28px; margin-bottom:35px;" class="labelhead">Background Color</p>
+                  <p style="margin-bottom:25px;"class="labelhead">Logo</p>
+                  <p style="margin-bottom:25px;" class="labelhead">Offer</p>
+                  <p class="labelhead">URL</p>
+              </div>
+              <fieldset class="large-5 columns">
+                <legend class="labelhead"></legend>
+                <input type="color" name="bgColor" id="bgColor" value="n/a">
+                <select id="baseLogo" name="baseLogo" data-div="baseLogoDiv">
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">Select Logo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1461948463/volvo_fyixgc.png">Volvo</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462015964/saab_xsp4lz.png">Saab</option>
+                  <option value="https://res.cloudinary.com/djangoles/image/upload/v1462018327/VW_ALPHA_zqbevy.png">Volkswagon</option>
+                </select>
+                <input name="baseOffer" id="baseOffer" type="text">
+                <input id="baseURL" name="baseURL" data-div="baseURLDiv" type="text">
+              </fieldset>
+            </div>
+
+             <hr>
+             
+           <label>
+              Notes
+              <textarea rows="4" class="labelhead" name="notes"></textarea>
+            </label>
+              <button class="button">SUBMIT</button>
+          <a href="/orders" class="button alert">CANCEL</a>
+        </div> <!--LEFT SIDE FORM CONTAINER END-->
+        
+        
+        
+      <div id="imgContainer" class="small-7 columns">
+        <h4>Endcard Sample <span id="baseCodeDIV"></span></h4>
+      <div class="small-12 columns" style="" id="bgColorDiv">
+<!-----------------DYNAMIC CONTENT WILL GO HERE-------------------------------->
+          <div class="small-12 columns" id="baseLogoDiv">
+            <img src="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">
+          </div>
+          <div class="small-12 columns" id="baseOfferDiv">
+            <p></p>
+          </div>
+          
+        <div class="small-6 text-center columns">
+            <div class="small-12 columns" id="baseDealerDiv">
+                <p></p>
+            </div>
+            <div class="small-12 columns" id="baseAddress1Div">
+                <p></p>
+            </div>
+            <div class="small-12 columns" id="baseLocation1Div">
+                <p></p>
+            </div>     
+        </div>  
+   
+        <div class="small-6 text-center columns">  
+          <div class="small-12 columns" id="baseDealer2Div">
+            <p></p>
+          </div>
+          <div class="small-12 columns" id="baseAddress2Div">
+            <p></p>
+          </div>
+          <div class="small-12 columns" id="baseLocation2Div">
+            <p></p>
+          </div>
+        </div>
+          
+          <div class="small-12 columns" id="baseURLDiv">
+            <p></p>
+          </div>
+      </div><!--bgColorDiv END-->
+      
+ 
+<!-- ----------EXTRA DEALER ADDONS----------------------------------------- -->
+
+<div id="addtionalDealersForm" class="small-12 columns">
+  <h2 class="text-center">Dealers</h2>
+
+            <div id="dealer2DIV" class="small-12 columns">
+              
+                <div class="small-6 columns">
+                    <label class="labelhead">Dealer 1</label>
+                    <input id="baseDealer" name="baseDealer" type="text">
+                    <label class="labelhead">Address</label>
+                    <input id="baseAddress1" name="baseAddress1" data-div="baseAddress1Div" type="text">
+                    <label class="labelhead">City</label>
+                    <input id="baseLocation1" name="baseLocation1" data-div="baseLocation1Div" type="text">        
+                </div>
+        
+                <div class="small-6 columns">
+                    <label class="labelhead">Dealer 2</label>
+                    <input id="baseDealer2" name="baseDealer2"  type="text">
+                    <label class="labelhead">Address</label>
+                    <input id="baseAddress2" name="baseAddress2" data-div="baseAddress2Div" type="text">
+                    <label class="labelhead">City</label>
+                    <input id="baseLocation2" name="baseLocation2" data-div="baseLocation2Div" type="text">
+                </div>
+  
+           </div>
+ 
+    </div><!--id="addtionalDealersForm"-->
+  </div><!--id="imgContainer" END  -->
+  
+</form> 
+<!-----------------END DYNAMIC CONTENT ---------------------------------------->  
+
+
+</div><!--id="mainContainer" END-->
+<br>
+<br>
+<br>
+<br>
+
+<% include ./partials/footer %>
+
+   
+
+ 
+

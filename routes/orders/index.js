@@ -21,10 +21,31 @@ router.get('/orders', function(req, res) {
 });
 
 
+
 //SHOW ORDER FORM--------------------------------
 router.get('/orders/new', function(req, res) {
    res.render('new'); 
 });
+
+
+//MULTIPLE DEALER FORMS-------------------------------
+router.get('/orders/onedealer', function(req, res) {
+   res.render('onedealer'); 
+});
+
+router.get('/orders/twodealer', function(req, res) {
+   res.render('twodealer'); 
+});
+
+router.get('/orders/threedealer', function(req, res) {
+   res.render('threedealer'); 
+});
+
+router.get('/orders/fourdealer', function(req, res) {
+   res.render('fourdealer'); 
+});
+
+
 
 
 //SHOW ONE ORDER--------------------------------

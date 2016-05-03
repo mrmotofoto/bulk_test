@@ -153,11 +153,12 @@ font-size: 1.5em;
 
 
 /*INPUT FIELDS*/
+input[type='text'],
 input[id="cust_timing"],
 input[id="baseOffer"],
-input[id="baseDealer"],
-input[id="baseAddress1"],
-input[id="baseLocation1"],
+/*input[id="baseDealer"],*/
+/*input[id="baseAddress1"],*/
+/*input[id="baseLocation1"],*/
 input[id="baseURL"],
 input[id="baseLogo"],
 select {
@@ -166,7 +167,6 @@ select {
 
 select {
     height: 37px;
-    
 }
 
 input[name="bgColor"] {
@@ -227,8 +227,22 @@ input[type="checkbox"] {
 
 #addtionalDealersForm {
     /*display: none;*/
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
+/*#dealer1DIV {*/
+/*    display: none;*/
+/*}*/
 
+/*#dealer2DIV {*/
+/*    display: none;*/
+/*}*/
+
+/*#dealer3DIV {*/
+/*    display: none;*/
+/*}*/
+
+/*#dealer4DIV {*/
+/*    display: none;*/
+/*}*/
 

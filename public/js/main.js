@@ -43,6 +43,17 @@ function fillBgColor(colorpick, divID) {
   console.log(colorpick.value);
 }
 
+
+function fillAddDealerDiv(selectBox, divID) {
+    // SHOWING ADDIOTNAL DEALER FOR
+    var divID = document.getElementById(divID);
+    divID.style.display = "block";
+  }
+  
+  
+ 
+ 
+
 //------------------------------------------------------------------------------
 //========================CHANGE BACKGROUND COLOR===============================
 //------------------------------------------------------------------------------
@@ -70,6 +81,14 @@ _('baseOffer').onkeyup = function() {
     fillDiv(this, 'baseOfferDiv'); 
 };
 
+_('baseURL').onkeyup = function() {
+    
+    console.log(this.value);
+    fillDiv(this, 'baseURLDiv'); 
+};
+
+
+
 _('baseDealer').onkeyup = function() {
      console.log(this.value);
      fillDiv(this, 'baseDealerDiv'); 
@@ -85,21 +104,75 @@ _('baseLocation1').onkeyup = function() {
     fillDiv(this, 'baseLocation1Div'); 
 };
 
-_('baseURL').onkeyup = function() {
+
+_('baseDealer2').onkeyup = function() {
+     console.log(this.value);
+     fillDiv(this, 'baseDealerDiv2'); 
+};
+
+_('baseAddress2').onkeyup = function() {
     console.log(this.value);
-    fillDiv(this, 'baseURLDiv'); 
+    fillDiv(this, 'baseAddress2Div'); 
+};
+
+_('baseLocation2').onkeyup = function() {
+    console.log(this.value);
+    fillDiv(this, 'baseLocation2Div'); 
 };
 
 
-_('addtionalDealers').onchange = function() {
-  console.log(this.value);
-  toggleDiv(this, 'addtionalDealersForm');
-  
-}
 
-// _('baseCode').onkeyup = function() {
+
+// _('addtionalDealers').onchange = function() {
+//   console.log(this.value);
+//   toggleDiv(this, 'dealerCont1');
+  
+// }
+
+_('baseCode').onchange = function() {
+    
+    if(this.value === "oneDealer") {
+        
+        _('dealer2DIV').style.display = "none";
+        _('dealer3DIV').style.display = "none";
+        _('dealer4DIV').style.display = "none";
+        fillAddDealerDiv(this, 'dealer1DIV'); 
+    }
+    if(this.value === "twoDealer") {
+        _('dealer1DIV').style.display = "none";
+        _('dealer3DIV').style.display = "none";
+        _('dealer4DIV').style.display = "none";
+        fillAddDealerDiv(this, 'dealer2DIV'); 
+    }
+    if(this.value === "threeDealer") {
+        _('dealer1DIV').style.display = "none";
+        _('dealer2DIV').style.display = "none";
+        _('dealer4DIV').style.display = "none";
+
+        fillAddDealerDiv(this, 'dealer3DIV'); 
+    }
+    if(this.value === "fourDealer") {
+        _('dealer1DIV').style.display = "none";
+        _('dealer2DIV').style.display = "none";
+        _('dealer3DIV').style.display = "none";
+        fillAddDealerDiv(this, 'dealer4DIV');
+    }
+    
+};
+
+// _('baseCode').onchange = function() {
 //     console.log(this.value);
-//     fillDiv(this, 'baseCodeDIV'); 
+//     fillAddDealerDiv(this, 'dealerCont2'); 
+// };
+
+// _('baseCode').onchange = function() {
+//     console.log(this.value);
+//     fillAddDealerDiv(this, 'dealerCont3'); 
+// };
+
+// _('baseCode').onchange = function() {
+//     console.log(this.value);
+//     fillAddDealerDiv(this, 'dealerCont4'); 
 // };
 
 
