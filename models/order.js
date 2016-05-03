@@ -12,6 +12,9 @@ var orderSchema = new mongoose.Schema({
     baseDealer: String,
     baseAddress1: String,
     baseLocation1: String,
+    baseDealer2: String,
+    baseAddress2: String,
+    baseLocation2: String,
     baseURL: String,
     notes: String,
     approved: 0,
@@ -22,7 +25,6 @@ var orderSchema = new mongoose.Schema({
 // lower3rdURL: String,
 // lower3rdLogo: String,
 
-  
     // client: {
     //     id: {
     //       type: mongoose.Schema.Types.ObjectId,

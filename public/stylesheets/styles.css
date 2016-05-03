@@ -6,6 +6,25 @@ li, ul {
 td img {
     width: 50px;
 }
+body {
+    min-width: 1200px;
+}
+
+#dealerTemplatesContainer {
+    background:#fafafa;
+    padding: 30px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    box-shadow: 2px 2px 100px #DDD;    
+}
+
+.dealerTemplates {
+    width: 75%;
+}
+
+.dealerTemplates:hover {
+    opacity: .7;
+}
 
 #topnav {
  
@@ -25,6 +44,7 @@ td img {
     margin-top: 30px;
     margin-bottom: 20px;
     color: white;
+    box-shadow: 2px 2px 100px #EEE;  
 }
 
 #mainContainer {
@@ -119,8 +139,6 @@ p.labelhead {
     display: block;
     margin: 0 auto;
     text-align: center;
-
-    
 }
 
 #baseURLDiv p {
@@ -136,7 +154,6 @@ p.labelhead {
     text-align: center;
     margin: 0px;
     padding: 0px;
-
 }
 
 
@@ -145,23 +162,21 @@ p.labelhead {
 #baseAddress2Div,
 #baseLocation1Div,
 #baseLocation2Div {
-font-family: 'Passion One', cursive;
-text-align: center;
-font-size: 1.4em;
-color:white;
-
-margin: 0px;
-padding: 0px
+    font-family: 'Passion One', cursive;
+    text-align: center;
+    font-size: 1.4em;
+    color:white;
+    margin: 0px;
+    padding: 0px;
 }
 
 #baseDealer2Div {
-font-family: 'Passion One', cursive;
-text-align: center;
-font-size: 1.4em;
-color:white;
-
-margin: 0px;
-padding: 0px
+    font-family: 'Passion One', cursive;
+    text-align: center;
+    font-size: 1.4em;
+    color:white;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -227,6 +242,13 @@ input[type="checkbox"] {
 #showImg img {
     width: 15%;
     margin-top: 20px;
+}
+
+
+@media (max-width: 1215px) {
+  body {
+    background: green;
+  }
 }
 
 

@@ -4,18 +4,20 @@ var Order = require('../../models/order');
 //var passport = require('passport');
 //var User = require('../models/user');
 
+
+
 router.get('/', function(req, res) {
-   res.redirect('/orders');
+   res.render('index');
 });  
 
 
-//SHOW ALL ORDERS--------------------------------
+//SHOW ALL ORDERS--------VIEW----------------
 router.get('/orders', function(req, res) {
     Order.find({}, function(err, data) {
        if(err) {
            console.log(err);
        } else {
-            res.render('index', {orders: data});
+            res.render('viewOrders', {orders: data});
        }
     });    
 });

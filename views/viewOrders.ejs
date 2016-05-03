@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+<div class="row">
+<div id="confirmHeader" class="small-12 text-center columns">
+  <h1>All Orders</h1>
+</div>
+<a href="/orders/new"><button class="button success">ADD NEW</button></a>
+<table>
+  <thead>
+    <tr>
+      <th>Logo</th>
+      <th>Template</th>
+      <th>:24/:06</th>
+      <th>:25/:05</th>
+      <th>Custom</th>
+      <th>BG Color</th>
+      <th>Offer</th>
+      <th>Dealer</th>
+      <th>Address1</th>
+      <th>Location</th>
+      <th>URL</th>
+      <th>Notes</th>
+      <th>View</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--LOOP HERE-->
+    <% orders.forEach(function(order) { %>
+   <tr>
+      <td><img src="<%= order.baseLogo %>"></td>
+      <td><%= order.baseCode %></td>
+      <td><%= order.timingbox1 %></td>
+      <td><%= order.timingbox2 %></td>
+      <td><%= order.cust_timing %></td>
+      <td><%= order.bgColor %></td>
+      <td><%= order.baseOffer %></td>
+      <td><%= order.baseDealer %></td>
+      <td><%= order.baseAddress1 %></td>
+      <td><%= order.baseLocation1 %></td>
+      <td><%= order.baseURL %></td>
+      <td><%= order.notes %></td>
+      <td><a href="/orders/<%= order._id %>"><button class="button">VIEW</button></a></td>
+      <td><a href="/orders/<%= order._id %>/edit"><button class="button alert">EDIT</button></a></td>
+    </tr>  
+   
+   <% }) %>
+  
+  </tbody>
+</table>
+
+<% include ./partials/footer %>

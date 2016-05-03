@@ -1,51 +1,55 @@
-<% include ./partials/header %>
-<div class="row">
-<div id="confirmHeader" class="small-12 text-center columns">
-  <h1>All Orders</h1>
-</div>
-<a href="/orders/new"><button class="button success">ADD NEW</button></a>
-<table>
-  <thead>
-    <tr>
-      <th>Logo</th>
-      <th>Template</th>
-      <th>:24/:06</th>
-      <th>:25/:05</th>
-      <th>Custom</th>
-      <th>BG Color</th>
-      <th>Offer</th>
-      <th>Dealer</th>
-      <th>Address1</th>
-      <th>Location</th>
-      <th>URL</th>
-      <th>Notes</th>
-      <th>View</th>
-      <th>Edit</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!--LOOP HERE-->
-    <% orders.forEach(function(order) { %>
-   <tr>
-      <td><img src="<%= order.baseLogo %>"></td>
-      <td><%= order.baseCode %></td>
-      <td><%= order.timingbox1 %></td>
-      <td><%= order.timingbox2 %></td>
-      <td><%= order.cust_timing %></td>
-      <td><%= order.bgColor %></td>
-      <td><%= order.baseOffer %></td>
-      <td><%= order.baseDealer %></td>
-      <td><%= order.baseAddress1 %></td>
-      <td><%= order.baseLocation1 %></td>
-      <td><%= order.baseURL %></td>
-      <td><%= order.notes %></td>
-      <td><a href="/orders/<%= order._id %>"><button class="button">VIEW</button></a></td>
-      <td><a href="/orders/<%= order._id %>/edit"><button class="button alert">EDIT</button></a></td>
-    </tr>  
-   
-   <% }) %>
-  
-  </tbody>
-</table>
 
+<% include ./partials/header %>
+
+<!--TITILE HEAD-->
+<div class="row">
+    <div id="mainTop" class="small-12 text-center columns">
+      <h1>Choose Template</h1>
+    </div>
+</div>
+<!--TITILE HEAD END-->
+<div class="row">
+    
+
+    <div id="dealerTemplatesContainer">
+        <div class="row">
+            <div class="small-6 text-center columns">
+                 <h1>TEMPLATE 1</h1>
+                 <a href="/orders/onedealer">
+<img class="dealerTemplates" src="https://res.cloudinary.com/djangoles/image/upload/v1462308378/temp1_uskru7.jpg"></img>
+                 </a>
+            </div>
+        
+            <div class="small-6 text-center columns">
+                 <h1>TEMPLATE 2</h1>
+                <a href="/orders/twodealer">
+        <img class="dealerTemplates" src="https://res.cloudinary.com/djangoles/image/upload/v1462308378/temp2_pm3bcn.jpg"></img>  
+                </a>
+                 
+            </div> 
+        </div>
+        
+        <div class="row">
+            <div class="small-6 text-center columns">
+                 <h1>TEMPLATE 3</h1>
+                <a href="/orders/threedealer">
+<img class="dealerTemplates" src="https://res.cloudinary.com/djangoles/image/upload/v1462308378/temp3_almw43.jpg"></img>
+                </a> 
+            </div>
+        
+            <div class="small-6 text-center columns">
+                 <h1>TEMPLATE 4</h1>
+                <a href="/orders/threedealer">
+<img class="dealerTemplates" src="https://res.cloudinary.com/djangoles/image/upload/v1462308378/temp1_uskru7.jpg"></img>
+                </a>
+            </div>   
+        </div>
+    </div>
+
+</div>
 <% include ./partials/footer %>
+
+   
+
+ 
+
