@@ -94,23 +94,10 @@ p.labelhead {
 #baseLogoDiv {
     opacity: 1;
     display: block;
+    background:none;
+    text-align: center;
 }
 
-#baseOfferDiv,
-#baseDealerDiv,
-#baseAddress1Div,
-#baseLocation1Div,
-#baseURLDiv {
-    opacity: 1;
-    color:white;
-    font-family: Oswald;  
-}
-
-#baseCodeDIV {
-    opacity: 1;
-    color:black;
-    font-family: Oswald; 
-}
 
 #baseLogoDiv img {
     text-align: center;
@@ -119,46 +106,72 @@ p.labelhead {
 }
 
 
-
-#baseLogoDiv {
-  background:none;
-  text-align: center;
-}
-
 #baseURLDiv {
     font-family: 'Passion One', cursive;
-    height: 25px;
-    text-align: center;
+    z-index: 3;
+    position: absolute;
+    top: 600px;
+    left: 236px;
+    width: 100%;
     font-size: 1.2em;
-    margin-top: 55px;
-}
-
-
-#baseOfferDiv {
-    font-family: 'Passion One', cursive;
-    font-weight: bold;
-    font-size: 2.7em;
+    /*margin-top: 55px;*/
+    opacity: 1;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    margin-top: 10px;
+
+    
 }
+
+#baseURLDiv p {
+    padding-left: 100px;
+    margin-left: 200px;
+}
+
+
+#baseOfferDiv  {
+    font-family: 'Passion One', cursive;
+    font-size: 2.7em;
+    color:white;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+}
+
 
 #baseDealerDiv,
 #baseAddress1Div,
-#baseLocation1Div {
+#baseAddress2Div,
+#baseLocation1Div,
+#baseLocation2Div {
 font-family: 'Passion One', cursive;
-height: 25px;
 text-align: center;
-font-size: 1.5em;
+font-size: 1.4em;
+color:white;
+
+margin: 0px;
+padding: 0px
 }
+
+#baseDealer2Div {
+font-family: 'Passion One', cursive;
+text-align: center;
+font-size: 1.4em;
+color:white;
+
+margin: 0px;
+padding: 0px
+}
+
+
 
 
 /*INPUT FIELDS*/
 input[type='text'],
 input[id="cust_timing"],
 input[id="baseOffer"],
-/*input[id="baseDealer"],*/
-/*input[id="baseAddress1"],*/
-/*input[id="baseLocation1"],*/
+
 input[id="baseURL"],
 input[id="baseLogo"],
 select {
@@ -205,12 +218,6 @@ input[type="checkbox"] {
 
 /*CHECKBOX TESTS*/
 
-#testCheck1DIV,
-#testCheck2DIV,
-#testCheck3DIV,
-#testCheck4DIV {
-    opacity: 0;
-}
 
 /*SHOW PAGE*/
 #showBG {
@@ -223,26 +230,9 @@ input[type="checkbox"] {
 }
 
 
-/*ADDTIONAL DEALERS FORM*/
 
-#addtionalDealersForm {
-    /*display: none;*/
-    /*opacity: 0;*/
-}
 
-/*#dealer1DIV {*/
-/*    display: none;*/
-/*}*/
 
-/*#dealer2DIV {*/
-/*    display: none;*/
-/*}*/
 
-/*#dealer3DIV {*/
-/*    display: none;*/
-/*}*/
 
-/*#dealer4DIV {*/
-/*    display: none;*/
-/*}*/
 

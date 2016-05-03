@@ -23,8 +23,8 @@
           </div>
 
          <div class="small-12 columns">
-            <a class="button" href=''>One Dealer</a>
-            <a class="button" href="/orders/twodealer">Two Dealer</a>
+            <a class="button" href='/orders/onedealer'>One Dealer</a>
+            <a class="button" href="">Two Dealer</a>
             <a class="button" href="/orders/threedealer">Three Dealer</a>
             <a class="button" href="/orders/fourdealer">Four Dealer</a>
           </div>
@@ -109,7 +109,7 @@
             <img src="https://res.cloudinary.com/djangoles/image/upload/v1462017844/ALPHA_iqhp2i.png">
           </div>
           <div class="small-12 columns" id="baseOfferDiv">
-            <p></p>
+            <p id="baseOfferP"></p>
           </div>
           
         <div class="small-6 text-center columns">
@@ -135,9 +135,10 @@
             <p></p>
           </div>
         </div>
-          
-          <div class="small-12 columns" id="baseURLDiv">
-            <p></p>
+          <div class="small-12 columns">
+            <div class="small-12 columns" id="baseURLDiv">
+              <p></p>
+            </div>
           </div>
       </div><!--bgColorDiv END-->
       
@@ -160,7 +161,7 @@
         
                 <div class="small-6 columns">
                     <label class="labelhead">Dealer 2</label>
-                    <input id="baseDealer2" name="baseDealer2"  type="text">
+                    <input name="baseDealer2" id="baseDealer2"  type="text">
                     <label class="labelhead">Address</label>
                     <input id="baseAddress2" name="baseAddress2" data-div="baseAddress2Div" type="text">
                     <label class="labelhead">City</label>

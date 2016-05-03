@@ -44,11 +44,11 @@ function fillBgColor(colorpick, divID) {
 }
 
 
-function fillAddDealerDiv(selectBox, divID) {
-    // SHOWING ADDIOTNAL DEALER FOR
-    var divID = document.getElementById(divID);
-    divID.style.display = "block";
-  }
+// function fillAddDealerDiv(selectBox, divID) {
+//     // SHOWING ADDIOTNAL DEALER FOR
+//     var divID = document.getElementById(divID);
+//     divID.style.display = "block";
+//   }
   
   
  
@@ -107,7 +107,7 @@ _('baseLocation1').onkeyup = function() {
 
 _('baseDealer2').onkeyup = function() {
      console.log(this.value);
-     fillDiv(this, 'baseDealerDiv2'); 
+     fillDiv(this, 'baseDealer2Div'); 
 };
 
 _('baseAddress2').onkeyup = function() {
@@ -129,36 +129,36 @@ _('baseLocation2').onkeyup = function() {
   
 // }
 
-_('baseCode').onchange = function() {
+// _('baseCode').onchange = function() {
     
-    if(this.value === "oneDealer") {
+//     if(this.value === "oneDealer") {
         
-        _('dealer2DIV').style.display = "none";
-        _('dealer3DIV').style.display = "none";
-        _('dealer4DIV').style.display = "none";
-        fillAddDealerDiv(this, 'dealer1DIV'); 
-    }
-    if(this.value === "twoDealer") {
-        _('dealer1DIV').style.display = "none";
-        _('dealer3DIV').style.display = "none";
-        _('dealer4DIV').style.display = "none";
-        fillAddDealerDiv(this, 'dealer2DIV'); 
-    }
-    if(this.value === "threeDealer") {
-        _('dealer1DIV').style.display = "none";
-        _('dealer2DIV').style.display = "none";
-        _('dealer4DIV').style.display = "none";
+//         _('dealer2DIV').style.display = "none";
+//         _('dealer3DIV').style.display = "none";
+//         _('dealer4DIV').style.display = "none";
+//         fillAddDealerDiv(this, 'dealer1DIV'); 
+//     }
+//     if(this.value === "twoDealer") {
+//         _('dealer1DIV').style.display = "none";
+//         _('dealer3DIV').style.display = "none";
+//         _('dealer4DIV').style.display = "none";
+//         fillAddDealerDiv(this, 'dealer2DIV'); 
+//     }
+//     if(this.value === "threeDealer") {
+//         _('dealer1DIV').style.display = "none";
+//         _('dealer2DIV').style.display = "none";
+//         _('dealer4DIV').style.display = "none";
 
-        fillAddDealerDiv(this, 'dealer3DIV'); 
-    }
-    if(this.value === "fourDealer") {
-        _('dealer1DIV').style.display = "none";
-        _('dealer2DIV').style.display = "none";
-        _('dealer3DIV').style.display = "none";
-        fillAddDealerDiv(this, 'dealer4DIV');
-    }
+//         fillAddDealerDiv(this, 'dealer3DIV'); 
+//     }
+//     if(this.value === "fourDealer") {
+//         _('dealer1DIV').style.display = "none";
+//         _('dealer2DIV').style.display = "none";
+//         _('dealer3DIV').style.display = "none";
+//         fillAddDealerDiv(this, 'dealer4DIV');
+//     }
     
-};
+// };
 
 // _('baseCode').onchange = function() {
 //     console.log(this.value);
